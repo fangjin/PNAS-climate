@@ -1,0 +1,86 @@
+['Mexico',	7354,	348],
+['Brazil',	4211,	116],
+['Venezuela',	3952,	132],
+['Paraguay',	2577,	88],
+['Argentina',	1868,	54],
+['Colombia',	1613,	84],
+['Chile',	970,	22],
+['El Salvador',	889,	42],
+['Uruguay',	790,	20],
+['Ecuador',	666,	27],
+['Bolivia',	98,	15],
+['Peru',	81	, 21],
+['Panama',	61,	7],
+['Honduras',	59,	2],
+['Guatemala',	54,	6],
+['Nicaragua',	42,	3],
+['Guyana',	34,	3],
+['Cost Rica',	27,	1]
+
+
+
+
+country	total protests	climate protests	Percentage
+Mexico	7354	348	0.047321186
+Brazil	4211	116	0.027546901
+Venezuela	3952	132	0.03340081
+Paraguay	2577	88	0.034148234
+Argentina	1868	54	0.028907923
+Colombia	1613	84	0.052076875
+Chile	970	22	0.022680412
+El Salvador	889	42	0.047244094
+Uruguay	790	20	0.025316456
+Ecuador	666	27	0.040540541
+Bolivia	98	15	0.153061224
+Peru	81	20	0.24691358
+Panama	61	7	0.114754098
+Honduras	59	2	0.033898305
+Guatemala	54	6	0.111111111
+Nicaragua	42	3	0.071428571
+Guyana	34	3	0.088235294
+Cost Rica	27	1	0.037037037
+
+
+
+['Mexico',	348],
+['Brazil',	116],
+['Venezuela',	132],
+['Paraguay',	88],
+['Argentina',	54],
+['Colombia',	84],
+['Chile',	22],
+['El Salvador',	42],
+['Uruguay',	20],
+['Ecuador', 27],
+['Bolivia',	15],
+['Peru',	20],
+['Panama',7],
+['Honduras', 2],
+['Guatemala', 6],
+['Nicaragua', 3],
+['Guyana', 3],
+['Cost Rica',	1]
+
+
+
+
+
+['Mexico',	0.047321186],
+['Brazil',	0.027546901],
+['Venezuela',	0.03340081],
+['Paraguay',	0.034148234],
+['Argentina',	0.028907923],
+['Colombia',	0.052076875],
+['Chile',	0.022680412],
+['El Salvador',	0.047244094],
+['Uruguay',	0.025316456],
+['Ecuador', 0.040540541],
+['Bolivia',	0.153061224],
+['Peru',	0.24691358],
+['Panama',0.114754098],
+['Honduras', 0.033898305],
+['Guatemala', 0.111111111],
+['Nicaragua', 0.071428571],
+['Guyana', 0.088235294],
+['Cost Rica',	0.037037037]
+

@@ -1,0 +1,103 @@
+{'Brazil': {'power': 14, 'energy': 1, 'environment': 29, 'drought': 2, 'total': 116, 'lackofwater': 19}, 
+'Chile': {'power': 4, 'energy': 1, 'hurricane': 1, 'environment': 13, 'total': 22, 'lackofwater': 2}, 
+'Mexico': {'power': 24, 'energy': 17, 'hurricane': 37, 'environment': 107, 'flood': 2, 'storm': 45, 'total': 348, 'lackofwater': 104}, 
+'El Salvador': {'environment': 15, 'total': 42, 'lackofwater': 22}, 
+'Venezuela': {'power': 27, 'energy': 10, 'hurricane': 1, 'environment': 45, 'flood': 1, 'storm': 1, 'drought': 3, 'total': 132, 'lackofwater': 69}, 
+'Colombia': {'power': 1, 'energy': 7, 'hurricane': 1, 'environment': 28, 'storm': 2, 'drought': 1, 'total': 84, 'lackofwater': 19}, 
+'Argentina': {'power': 19, 'energy': 3, 'environment': 14, 'storm': 1, 'drought': 2, 'total': 54, 'lackofwater': 8}, 
+'Peru': {'environment': 13, 'energy': 1, 'total': 21, 'power': 1, 'lackofwater': 3}, 
+'Paraguay': {'power': 8, 'energy': 1, 'environment': 23, 'flood': 1, 'storm': 3, 'drought': 3, 'total': 88, 'lackofwater': 11}, 
+'Bolivia': {'environment': 9, 'energy': 1, 'total': 15, 'lackofwater': 1}, 
+'Ecuador': {'environment': 4, 'energy': 8, 'total': 27, 'lackofwater': 6}}
+
+
+'Nicaragua': {'total': 3}, 
+'Honduras': {'energy': 1, 'total': 2, 'power': 1}, 
+'Panama': {'environment': 4, 'total': 7, 'lackofwater': 2}, 
+'Uruguay': {'environment': 9, 'energy': 7, 'total': 20, 'lackofwater': 5, 'power': 3}, 
+'Costa Rica': {'total': 1}, 
+'Guatemala': {'total': 6, 'power': 2, 'lackofwater': 1}, 
+'Guyana': {'total': 3, 'lackofwater': 1, 'power': 3}, 
+
+
+Ecuador Climate Protest [4] Environment
+Ecuador Climate Protest  [8] Energy
+Ecuador Climate Protest  [6] Lack of water
+Ecuador Climate Protest  [9] Others
+
+
+Paraguay Climate Protest [8] Power
+Paraguay Climate Protest [1] Energy
+Paraguay Climate Protest [23] Environment
+Paraguay Climate Protest [1] Flood
+Paraguay Climate Protest [3] Storm
+Paraguay Climate Protest [3] Drought
+Paraguay Climate Protest [11] Lack of water
+Paraguay Climate Protest [38] Others
+
+
+
+Peru Climate Protest [13] Environment
+Peru Climate Protest [1] Energy
+Peru Climate Protest [1] Power
+Peru Climate Protest [3] Lack of water
+Peru Climate Protest [3] Others
+
+Colombia Climate Protest [1] Power
+Colombia Climate Protest [7] Energy
+Colombia Climate Protest [1] Hurricane
+Colombia Climate Protest [28] Environment
+Colombia Climate Protest [2] Storm
+Colombia Climate Protest [1] Drought
+Colombia Climate Protest [19] Lack of water
+Colombia Climate Protest [15] Others
+
+
+Venezuela Climate Protest [27] Power
+Venezuela Climate Protest[10] Energy
+Venezuela Climate Protest[1] Hurricane
+Venezuela Climate Protest[35] Environment
+Venezuela Climate Protest[1] Flood
+Venezuela Climate Protest[1] Storm
+Venezuela Climate Protest[3] Drought
+Venezuela Climate Protest[54] Lack of water
+
+El Salvador Climate Protest [15] Environment
+El Salvador Climate Protest[22] Lack of water
+El Salvador Climate Protest[5] Others
+
+Chile Climate Protest[4] Power
+Chile Climate Protest[1] Energy
+Chile Climate Protest[1] Hurricane
+Chile Climate Protest[10] Environment
+Chile Climate Protest[6] Lack of water
+
+Argentina Climate Protest [19] Power 
+Argentina Climate Protest[3] Energy
+Argentina Climate Protest[14] Environment
+Argentina Climate Protest[1] Storm 
+Argentina Climate Protest[2] Drought
+Argentina Climate Protest[8] Lack of water
+Argentina Climate Protest[7] Others
+
+
+Brazil Climate Protest[14] Power 
+Brazil Climate Protest[1] Energy
+Brazil Climate Protest[29] Environment
+Brazil Climate Protest[2] Drought
+Brazil Climate Protest[24] Lack of water
+Brazil Climate Protest[46] Others
+
+Mexico Climate Protest[24] Power 
+Mexico Climate Protest[17] Energy
+Mexico Climate Protest[37] Hurricane
+Mexico Climate Protest[107] Environment
+Mexico Climate Protest[2] Flood
+Mexico Climate Protest[45] Storm
+Mexico Climate Protest[115] Lack of water
+Mexico Climate Protest[1] Others
+
+
+
+Mexico [348] Mexico Climate
+Venezuela [132] Venezuela Climate

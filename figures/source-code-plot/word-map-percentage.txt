@@ -1,0 +1,39 @@
+      google.charts.load('current', {'packages':['geochart']});
+      google.charts.setOnLoadCallback(drawRegionsMap);
+
+      function drawRegionsMap() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Country', 'Percentage'],
+   		  ['Mexico',	0.047321186],
+          ['Brazil',	0.027546901],
+          ['Venezuela',	0.03340081],
+          ['Paraguay',	0.034148234],
+          ['Argentina',	0.028907923],
+          ['Colombia',	0.052076875],
+          ['Chile',	0.022680412],
+          ['El Salvador',	0.047244094],
+          ['Uruguay',	0.025316456],
+          ['Ecuador', 0.040540541],
+          ['Bolivia',	0.153061224],
+          ['Peru',	0.2591358],
+          ['Panama',0.114754098],
+          ['Honduras', 0.033898305],
+          ['Guatemala', 0.111111111],
+          ['Nicaragua', 0.071428571],
+          ['Guyana', 0.088235294],
+          ['Cost Rica',	0.037037037]
+        ]);
+
+       var options = {
+          region: '019', // Amerian       
+          colorAxis: {colors: ['#00FF00', '#FFFF00', '#FF0000']},
+          backgroundColor: '#81d4fa',
+          datalessRegionColor: '#f8bbd0',
+          defaultColor: '#f5f5f5',
+        };
+
+        var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+        chart.draw(data, options);
+      }
