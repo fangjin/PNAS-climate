@@ -26,7 +26,8 @@
 \leadauthor{Jin}
 
 
-\significancestatement{}
+\significancestatement{From 1995-2015, 90\% of global disasters are caused by extreme weather events such as flood, storm, heat wave and so on. What is more, the extreme weather events are increasing continuously, resulting natural disasters happen more and more frequent. Records from the international disaster database EM-DAT shows, the average disasters per year from 2005 to 2014 is 14\% higher than the years between 1995 and 2004, and is twice of years between 1985 and 1994. However, how the extreme weather events lead to armed conflicts is still under disclosed. This work presents a promising strategy to identify climate change related protests in South America, and further trace back protest causalities, and discover the mainly evolution patterns from climate change to civil unrest. This work can be extended into United States and other countries, to help decision makers understand the evolution path from extreme weather events to civil unrest, and benefit for society stabilization and human well-beings.}
+
 
 % Please include corresponding author, author contribution and author declaration information
 \authorcontributions{Please provide details of author contributions here.}
@@ -373,7 +374,7 @@ We are also interested in climate events influence on social media, such as Twit
 
 
 \paragraph{Climate protest analysis}
-According to the protest content, we cluster each country's protests type. Based on protest descriptions, we calculate two descriptions text similarity, and assign weight between the two protest IDs. Specially, we pay special attention to the protest themes or protest demands, if two descriptions have the same protest demanding, they will have high weight, otherwise, if their protest demanding are different, their connection weight tends to be 0. In this way, we build a weighted undirected network $G(V, E, W)$, with each protest as node $V$, and their connection as edge $E$, their weight as $W$. If the weight between two nodes is 0, their will be no edge. We employ Louvain method~\cite{blondel2008fast} to split the network into several clusters. 
+According to the protest content, we cluster each country's protests type. Based on protest descriptions, we calculate two descriptions text similarity, and assign weight between the two protest IDs. Specially, we pay special attention to the protest themes or protest demands, if two descriptions have the same protest demanding, they will have high weight, otherwise, if their protest demanding are different, their connection weight tends to be 0. In this way, we build a weighted undirected network $G(V, E, W)$, with each protest as node $V$, and their connection as edge $E$, their weight as $W$. If the weight between two nodes is 0, their will be no edge. We employ Louvain method~\cite{blondel2008fast} to split the network into several clusters.
 
 
 
