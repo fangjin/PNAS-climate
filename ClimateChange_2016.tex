@@ -54,6 +54,7 @@
 \maketitle
 \thispagestyle{firststyle}
 \ifthenelse{\boolean{shortarticle}}{\ifthenelse{\boolean{singlecolumn}}{\abscontentformatted}{\abscontent}}{}
+\section{1. Introduction}
 \dropcap{C}limate change, extreme weather, and the state of the environment directly impact the availability of food \cite{RW3}, energy \cite{}, and shelter \cite{}.
 As finite resources become scarce, the residual impacts on local economies can have disastrous and long-lasting effects on the fundamental livelihoods of inhabitants for decades \cite{}.
 In some cases, the resulting instability can severely detriment the ability of an established political system to maintain peace.
@@ -84,7 +85,7 @@ NOTE: THERE ARE A LOT OF FIGURES - these are observations - BUT WE NEED TO DRAW 
 
 %
 %
-\paragraph{Related research}
+\section{2. Related research}
 The path from climate, extreme weather and environmental effects to civil unrest is causally complex \cite{hsiang2011civil,RW5} and involves various combinations of climate change \cite{burke2014climate}, natural resources, human security, and social stability.
 In general, sensitivities to climate change, exposure to climate change, and the ability of a society to adapt are indicators of whether or not violence will erupt~\cite{RW9}.
 A commonly studied pathway is the effect of climate on food prices which then induces civil unrest.
@@ -99,15 +100,8 @@ However, even this path of climate effects on income level leading to conflict i
 
 
 
-\begin{figure}[ht]
-\centerline
-{\includegraphics[width=.2\textwidth]{figures/GSR}}
-\caption{GSR protest events in Latin American countries, from November 2012 to August 2014.}
-\label{GSR}
-\end{figure}
-
-\section*{Climate Change Protests}
-We study 25352 GSR civil unrest events across Latin American countries from July 2011 to March 2015, as shown in Figure~\ref{GSR}. We build a climate change protest classifier, aim to identify how many civil unrest events are caused by climate change or extreme weathers.
+\section*{3. Climate Protests Overview}
+We study 25352 GSR civil unrest events across Latin American countries from July 2011 to March 2015. We build a climate change protest classifier, aim to identify how many civil unrest events are caused by climate change or extreme weathers.
 
 
 \begin{figure}[ht]
@@ -140,7 +134,7 @@ We study 25352 GSR civil unrest events across Latin American countries from July
 %\label{population-density}
 %\end{figure}
 
-\subsection{Climate protest percentage}
+\subsection{3.1 Climate protest distribution}
 Among all the 25352 GSR protest events,  991 events are classified into climate-related events. In other words, in Latin American countries, the climate related protests accounts for 3.91\%. As shown in Figure~\ref{month_percentage}, Blue bar shows all the GSR protest events, from the highest amount of Mexico 7354 to lowest country Cost Rica 27; yellow bar shows climate related protest events; the blue area describes the climate related protests percentage over all the GSR protest events. Figure~\ref{map_number} plots the climate related protests events numbers, we can see Mexico has the most climate protests events, as high as 348. And Figure~\ref{map_percentage} gives us a straight view of climate protest percentage, of which, Peru climate protest accounts as high as 25.9\%, Bolivia climate protest percentage reaches as high as 15.3\%, Panama 11.4\% and Guatemala 11.1\% respectively.
 
 \begin{figure}[ht]
@@ -158,36 +152,30 @@ Among all the 25352 GSR protest events,  991 events are classified into climate-
 \end{figure}
 
 
-\subsection{Spatial distribution}
-We pull out climate and non-climate events location, and show their distribution on the map, as shown in Figure~\ref{Brazil_map},~\ref{Mexico_map},~\ref{Venezuela_map}. Generally, the climate protest distribution is closely correlated with population density, the higher population density area, the more protest events, regardless of climate or non-climate.
+\subsection{3.2 Spatial distribution}
+We pull out climate and non-climate events location, and show their distribution on the map, as shown in Figure~\ref{climate-map}. Generally, the climate protest distribution is closely correlated with population density, the higher population density area, the more protest events, regardless of climate or non-climate.
 
-\begin{figure}[ht]
-\centerline
-{\includegraphics[width=.3\textwidth]{figures/Brazil}}
-\caption{Climate and non-climate protests in Brazil, from July 2012 to March, 2015. Red circle represents climate related protest events, and blue circle represents non-climate related protests. }
-\label{Brazil_map}
-\end{figure}
-
-
-
-\begin{figure}[ht]
-\centerline
-{\includegraphics[width=.35\textwidth]{figures/Mexico_climate_non-climate}}
-\caption{Climate and non-climate protests in Mexico, from July 2012 to March, 2015. Red circle represents climate related protest events, and blue circle represents non-climate related protests. }
-\label{Mexico_map}
-\end{figure}
-
-
-
-\begin{figure}[ht]
-\centerline
-{\includegraphics[width=.35\textwidth]{figures/Venezuela_climate_non-climate}}
-\caption{Climate and non-climate protests in Venezuela, from July 2012 to March, 2015. Red circle represents climate related protest events, and blue circle represents non-climate related protests. }
-\label{Venezuela_map}
-\end{figure}
+\begin{figure*}[ht]
+	\centering
+	\subfigure[Brazil]{
+		\includegraphics[height=1.6in] {figures/Brazil}
+		\label{Brazil_map}
+	}
+	\subfigure[Mexico]{
+		\includegraphics[height=1.4in] {figures/Mexico_climate_non-climate}
+		\label{Mexico_map}
+}
+	\subfigure[Venezuela]{
+		\includegraphics[height=1.5in] {figures/Venezuela_climate_non-climate}
+		\label{Venezuela_map}
+	}
+	\caption{Climate and non-climate protests from July 2012 to March, 2015. Red circle represents climate related protest events, and blue circle represents non-climate related protests. }
+\label{climate-map}
+\end{figure*}
 
 
-\subsection{Protest time interval deviation}
+
+\subsection{3.3 Protest time interval deviation}
 Figure~\ref{Mexico-deviation} shows Mexico climate and non-climate protests time interval distribution. We found the non-climate protests have very high percentage with small time interval, less than three days. The climate protests, on the contrary, time interval is longer than non-climate protests.
 
 \begin{figure}[ht]
@@ -198,7 +186,7 @@ Figure~\ref{Mexico-deviation} shows Mexico climate and non-climate protests time
 \end{figure}
 
 
-\subsection{Protests causality}
+\section*{4. Climate protests causality}
 Of the climate related protests, we are interested in what are the protesters demanding. To have a birds view of climate protests, we extract all the climate protest descriptions and plot the word cloud, as shows in Figure~\ref{wordcloud}. We can see words like `water', `storm', `mining', `rain', `construction', `power', `heat', `gas', `environment', `electricity', and other weather, environment related keywords are dominant, which gives us a general idea of what are protesters demanding.
 
 \begin{figure}[ht]
@@ -210,7 +198,7 @@ Of the climate related protests, we are interested in what are the protesters de
 
 However, what is the specific protest reasons, how is the proportion of each protest category? We build a classifier to categorize the climate protest types, which generally falls into nine categories. As can be seen in Figure~\ref{causality}, the most dominant two categories are environment concern and lack of water. After that, the third commonest reason is about power, blackout. Also, extreme weathers like storm, hurricane, drought also accounts a considerable portion. The interesting thing is, each country has its own distinguishing protest features. In Mexico, the most notable protest reasons are lack of water, environment concern, storm and hurricane. In Venezuela, apart from lack of water, environment problem, the dominant reasons are about blackout and energy issue. In Peru, more than half of climate protests are demanding mining project, which is related with environment concern. While in Argentina, 35\% events protest against blackout issue.
 
-For some severe and dominant climate events, such as storm, hurricane, flood, and drought events, we classify each category and identify their evolution pattern, thus from climate disasters, how does it evolve into armed conflicts? As shown in Figure~\ref{Mexico-causality}, ~\ref{Venezuela-causality} and~\ref{Brazil-causality}, we illustrate storm caused protests demands in Mexico, blackout caused protest demands in Venezuela, and drought caused protest demands in Brazil.
+For some severe and dominant climate events, such as storm, hurricane, flood, and drought events, we classify each category and identify their evolution pattern, thus from climate disasters, how does it evolve into armed conflicts? As shown in Figure~\ref{three-causality}, we illustrate storm caused protests demands in Mexico, blackout caused protest demands in Venezuela, and drought caused protest demands in Brazil.
 
 \begin{figure}[ht]
 \centerline
@@ -221,37 +209,26 @@ For some severe and dominant climate events, such as storm, hurricane, flood, an
 
 
 \begin{figure}[ht]
-\centerline
-{\includegraphics[height=1.4in]{figures/Mexico-diagram2}}
-\caption{Mexico climate protest causality diagram.}
-\label{Mexico-causality}
+	\centering
+	\subfigure[Mexico]{
+		\includegraphics[width=3in] {figures/Mexico-diagram2}
+		\label{Mexico_causality}
+	}
+	\subfigure[Brazil]{
+		\includegraphics[width=1.5in, height=0.9in] {figures/Brazil-diagram}
+		\label{Brazil_causality}
+	}
+    \subfigure[Venezuela]{
+		\includegraphics[width=1.5in, height=0.9in] {figures/Venezuela-diagram2}
+		\label{Venezuela_causality}
+    }
+	\caption{Climate protest causality diagram}
+\label{three-causality}
 \end{figure}
 
 
-\begin{figure}[ht]
-\centerline
-{\includegraphics[height=1in, width=2.7in]{figures/Venezuela-diagram2}}
-\caption{Venezuela climate protest causality diagram.}
-\label{Venezuela-causality}
-\end{figure}
 
-\begin{figure}[ht]
-\centerline
-{\includegraphics[height=1in, width=2.7in]{figures/Brazil-diagram}}
-\caption{Brazil climate protest causality diagram.}
-\label{Brazil-causality}
-\end{figure}
-
-%\begin{enumerate}
-%  \item How many climate related
-%  \item Significant pikes, significant rises
-%  \item Analyze some case studies in detail
-%\end{enumerate}
-
-%\paragraph{Climate disasters and protests}
-
-
-\subsection{Climate disasters and climate protests}
+\subsection{5. Climate disasters and climate protests}
 We are also wondering, what is the interaction between climate change and civil unrest, how the climate change events evolves into social movements, what is the time span?
 
 \paragraph{Mexico climate disasters}
@@ -261,12 +238,25 @@ Let us see an example of Mexico climate disasters and protests, as shown in Figu
 After the storm Manuel, related protests and other civil unrest events break out dozens of times, and lasts for more than two years because the government's response had been desperately inadequate. The related protest reached  climax in January 2014, and second climax in April 2014. We can see on November 19, 2013, there was report saying `it's been 63 days since the onslaught of `Ingrid' and `Manuel' and families were left homeless are still without help'. On January 22, 2014, news reporting `Cards require delivery of goods. Four months after the storm `Manuel' and the effects of Hurricane `Ingrid', they say `we have not received anything'.'. On April 7, protest description saying `Affected by Tropical Storm `Manuel' in the municipal head of Tixtla marched to demand the construction of a controlled channel, it will prevent a flood like that caused the overflow from the Black Lagoon in September 2013'. The related climate protests descriptions are shown in Figure~\ref{Manuel_word_cloud}.
 
 %~\footnote{https://weather.com/storms/hurricane/news/tropical-storm-manuel-hurricane-ingrid-hit-mexico-opposite-coasts-20130916}.
-\begin{figure}[ht]
-\centerline
-{\includegraphics[width=.35\textwidth]{figures/Mexico_disaster2}}
-\caption{Mexico climate disasters and climate protests. The blue time series shows the climate related protest events, and light red vertical lines show two climate diasters in Mexico, storm Manuel in September 17, 2013 and hurricane Odile in September 15, 2014 respectively.}
-\label{Mexico_disaster_timeseries}
-\end{figure}
+
+\begin{figure*}[ht]
+	\centering
+	\subfigure[Mexico]{
+		\includegraphics[height=1.3in] {figures/Mexico_disaster2}
+		\label{Mexico_disaster_timeseries}
+	}
+	\subfigure[Brazil]{
+		\includegraphics[height=1.3in] {figures/Brazil_disaster1}
+		\label{Brazil_disaster_timeseries}
+}
+	\subfigure[Venezuela]{
+		\includegraphics[height=1.3in] {figures/Venezuela_disaster}
+		\label{Venezuela_disaster_timeseries}
+	}
+	\caption{(a) Mexico climate disasters and climate protests. The blue time series shows the climate related protest events, and light red vertical lines show two climate diasters in Mexico, storm Manuel in September 17, 2013 and hurricane Odile in September 15, 2014 respectively. (b)Brazil climate disasters and climate protests. The blue time series shows the climate related protest events, and light red vertical lines show three climate diasters in Brazil, drought in Feb 2012, Heat wave in Feb 2014, and drought in Oct 2014, respectively. (c) Venezuela climate disasters and climate protests. The blue time series shows the climate related protest events, and light red vertical lines show flood diasters, and yellow vertical lines drought disasters.}
+\label{climate-map}
+\end{figure*}
+
 
 
 \begin{figure}[ht]
@@ -296,48 +286,11 @@ The interesting thing is, after hurricane Odile 2014, there was not many related
 \paragraph{Brazil climate disasters}
 Figure~\ref{Brazil_disaster_timeseries} shows Brazil climate disasters and climate protests relationship. The three red bar shows three drought events in Brazil, which caused drought related protests immediately. The drought in February 2012 hampered production, which arouse farmers protest. The heat wave in February in 2014, and drought in October 2014 results in water shortage, thus a series of protest abrupt in Brazil. The biggest spike in June 2013 are protests against government's projects for the construction of hydroelectric plants in the Amazon region, which can be ascribed into environment category.
 
-\begin{figure}[ht]
-\centerline
-{\includegraphics[width=.35\textwidth]{figures/Brazil_disaster1}}
-\caption{Brazil climate disasters and climate protests. The blue time series shows the climate related protest events, and light red vertical lines show three climate diasters in Brazil, drought in Feb 2012, Heat wave in Feb 2014, and drought in Oct 2014, respectively.}
-\label{Brazil_disaster_timeseries}
-\end{figure}
-
-
-\paragraph{Venezuela climate disasters}
-
-\begin{figure}[ht]
-\centerline
-{\includegraphics[width=.4\textwidth]{figures/Venezuela_disaster}}
-\caption{Venezuela climate disasters and climate protests. The blue time series shows the climate related protest events, and light red vertical lines show flood diasters, and yellow vertical lines drought disasters.}
-\label{Venezuela_disaster_timeseries}
-\end{figure}
-
 
 Figure~\ref{Venezuela_disaster_timeseries} shows Venezuela climate disasters and climate protests relationship. In June 2013, sudden torrential rains, a phenomenon associated with climate change, cause a heightened risk of flooding and landslides in the densely populated communities on the outskirts of Caracas. In May 2014, a drought has triggered rationing of tap water in the capital, Caracas, where residents must form lines that last hours to fill jugs of water for drinking, showering, and other needs.
 
-\paragraph{Spatial distribution of climate protests in Twitter}
-We are also interested in climate events influence on social media, such as Twitter. Using keywords list we are able to filter tweets, then cluster tweets into different partitions based on similarity among tweets using distance function, taking tweets content, geolocation and other features into consideration. Each partition includes similar tweets stand for a specific event. As shown in Figure~\ref{Mexico-events}, there are three distinct extreme weather event type in Mexico in different locations, the word cloud shows discussion on Twitter as per that event.
 
-\begin{figure}[ht]
-\centerline
-{\includegraphics[width=.3\textwidth]{figures/Mexico-events}}
-\caption{Climate protest events in Mexico, Sept 2013. Different flag represents different climate disasters. The adjacent world cloud shows Twitter discussion as per that event.}
-\label{Mexico-events}
-\end{figure}
-
-
-
-\begin{figure}[ht]
-\centerline
-{\includegraphics[width=.25\textwidth]{figures/Brazil-events}}
-\caption{Climate protest events in Brazil, May 2012. The adjacent world cloud shows Twitter discussion as per that event.}
-\label{Brazil-events}
-\end{figure}
-
-
-
-\paragraph{Climate protest analysis}
+\paragraph{6. Climate protest pattern}
 According to the protest content, we cluster each country's protests type. Based on protest descriptions, we calculate two descriptions text similarity, and assign weight between the two protest IDs. Specially, we pay special attention to the protest themes or protest demands, if two descriptions have the same protest demanding, they will have high weight, otherwise, if their protest demanding are different, their connection weight tends to be 0. In this way, we build a weighted undirected network $G(V, E, W)$, with each protest as node $V$, and their connection as edge $E$, their weight as $W$. If the weight between two nodes is 0, their will be no edge. We employ Louvain method~\cite{blondel2008fast} to split the network into several clusters.
 
 
@@ -345,50 +298,51 @@ According to the protest content, we cluster each country's protests type. Based
 For Venezuela's climate protests, as can be seen in Figure~\ref{Venezuela-cluster}, the yellow cluster which represents lack of water protests accounts for 55.8\%, the green cluster which denotes power outage accounts for 22.1\%, and the blue cluster which stands for gas shortage accounts for 5\%, the purple cluster shows the rest climate protest portion, which include food shortage, medicine shortage, water tank robbery behavior, etc..
 
 
+\begin{figure*}[ht]
+	\centering
+	\subfigure[Brazil]{
+		\includegraphics[width=2in, height=1.4in] {figures/Brazil_cluster}
+		\label{Mexico_map}
+	}
+    \subfigure[Mexico]{
+		\includegraphics[width=2in, height=1.4in] {figures/Mexico_cluster1}
+		\label{Venezuela_map}
+    }
+	\subfigure[Venezuela]{
+		\includegraphics[width=2in, height=1.4in] {figures/venezuela-cluster2}
+		\label{Brazil_map}
+	}
+	\caption{Climate protest clustering results}
+\label{clusters}
+\end{figure*}
+
+
+
+\paragraph{7. Climate protests in Twitter}
+We are also interested in climate events influence on social media, such as Twitter. Using keywords list we are able to filter tweets, then cluster tweets into different partitions based on similarity among tweets using distance function, taking tweets content, geolocation and other features into consideration. Each partition includes similar tweets stand for a specific event. As shown in Figure~\ref{Mexico-events}, there are three distinct extreme weather event type in Mexico in different locations, the word cloud shows discussion on Twitter as per that event.
+
+
 \begin{figure}[ht]
-\centerline
-{\includegraphics[width = 3.5in]{figures/Brazil_cluster}}
-\caption{Brazil protests clustering results.}
-\label{Brazil-cluster}
+	\centering
+	\subfigure[Mexico]{
+		\includegraphics[width=1.6in, height=1.3in] {figures/Mexico-events}
+		\label{Mexico-events}
+	}
+	\subfigure[Brazil]{
+		\includegraphics[width=1.45in, height=1.3in] {figures/Brazil-events}
+		\label{Brazil-events}
+	}
+	\caption{Climate protest events in Mexico, Sept 2013 and Brazil, May 2012. Different flag represents different climate disasters. The adjacent world cloud shows Twitter discussion as per that event. }
+\label{Twitter-events}
 \end{figure}
 
-\begin{figure}[ht]
-\centerline
-{\includegraphics[width = 3.5in]{figures/venezuela-cluster2}}
-\caption{Venezuela protests clustering results.}
-\label{Venezuela-cluster}
-\end{figure}
 
-
-\begin{figure}[ht]
-\centerline
-{\includegraphics[width = 3.5in]{figures/Mexico_cluster1}}
-\caption{Mexico protests clustering results.}
-\label{Mexico-cluster}
-\end{figure}
-
-\begin{figure}[ht]
-\centerline
-{\includegraphics[width = 3in, height=1.5in]{figures/resultsComp1}}
-\caption{Classification methods comparison.}
-\label{resultsComp}
-\end{figure}
-
-\section*{Discussion}
-
-%\matmethods{
-%Please describe your materials and methods here. This can be more than one paragraph, and may contain subsections and equations as required. Authors should include a statement in the methods section describing how readers will be able to access the data in the paper.
-
-Using human analysts, MITRE organizes a gold standard report (GSR) of protests by surveying newspapers for reportings of civil unrest. From GSR events, we devised a climate protest classifier to identify the climate related protest events automatically.
-
-The classifier is built based on logistic regression model. With input of GSR descriptions, we aim to train a classifier which can label a protest description as climate related or not. The GSR includes many potential important features, such as status, description, crowd size, headline, event Type, event Date, location, date, population etc. The description feature is brief description of the events, which plays a dominant role in the entire dataset. In order to adopt logistic regression on GSR dataset, we need to vectorize text data in the dataset. First of all, we construct a word corpus which includes every word $x_i$ shown in the training dataset (including non-words). We accept non-words because most coinages come from Internet and some of them might be important for the events. As we accept non-words, the corpus might be large than our corpus vocabulary. The word corpus is composed with $[x_1, x_2, ..., x_i, ..., x_N]$.
-Second, take each GSR description as a vector, we assign values to each vector, if $x_i$ appeared in GSR record, the corresponding value will be assigned as 1, otherwise 0. In this way, every GSR record being converted to a corresponding vector based on the corpus. Third, set climate protest as $Y=1$, non-climate protest as $Y=0$, the weight for each term $x_i$ as $k_i$, then $Y_j = \sum_{i=1}^{N} k_i x_i $. By training process, we calculate the weight $k_i$ for each term $x_i$. The last step is test. Given a new GSR description, the probability of classification is:
-$$P(Y = 0| X)= \frac{1}{1+exp( {\sum_{i=1}^{N} k_ix_i})}$$
-$$P(Y = 1| X)= \frac{exp( {\sum_{i=1}^{N} k_ix_i})}{1+exp( {\sum_{i=1}^{N} k_ix_i})}$$
-
-
-We manually labelled 1700 GSR protest records as climate or non-climate protests. Using 70\% dataset as training, and the rest 30\% as test. To ensure we have a trustworthy classification results, we evaluate the performance carefully by cross evaluation. The evaluation criteria are precision (positive predictive value), recall (true positive rate), F-measure (a measure that combines precision and recall) and accuracy (the proportion of true results both true positives and true negatives among the total number of cases examined). We compare with four well-known classification methods: majority assign, K-nearest neighbor, Naive Bayes, and weighted support vector machine (SVM). Since the climate events account for a small portion of all the events, which make it an unbalanced classification problem, so we change the traditional support vector machine into weighted SVM, by adding more importance to the climate portest events (we set the class weight to be 100). From Figure~\ref{resultsComp}, we prove our logistic regression method outperforms other methods uniformly.
-
+%\begin{figure}[ht]
+%\centerline
+%{\includegraphics[width = 3in, height=1.5in]{figures/resultsComp1}}
+%\caption{Classification methods comparison.}
+%\label{resultsComp}
+%\end{figure}
 
 \begin{table}[!ht]
 \small
@@ -414,6 +368,22 @@ Logisitic Regression & 0.7513 &  0.5102 &  \textbf{0.6018}&  \textbf{0.9322}  \\
 \end{table}
 
 
+\section*{Discussion}
+
+%\matmethods{
+%Please describe your materials and methods here. This can be more than one paragraph, and may contain subsections and equations as required. Authors should include a statement in the methods section describing how readers will be able to access the data in the paper.
+
+Using human analysts, MITRE organizes a gold standard report (GSR) of protests by surveying newspapers for reportings of civil unrest. From GSR events, we devised a climate protest classifier to identify the climate related protest events automatically.
+
+The classifier is built based on logistic regression model. With input of GSR descriptions, we aim to train a classifier which can label a protest description as climate related or not. The GSR includes many potential important features, such as status, description, crowd size, headline, event Type, event Date, location, date, population etc. The description feature is brief description of the events, which plays a dominant role in the entire dataset. In order to adopt logistic regression on GSR dataset, we need to vectorize text data in the dataset. First of all, we construct a word corpus which includes every word $x_i$ shown in the training dataset (including non-words). We accept non-words because most coinages come from Internet and some of them might be important for the events. As we accept non-words, the corpus might be large than our corpus vocabulary. The word corpus is composed with $[x_1, x_2, ..., x_i, ..., x_N]$.
+Second, take each GSR description as a vector, we assign values to each vector, if $x_i$ appeared in GSR record, the corresponding value will be assigned as 1, otherwise 0. In this way, every GSR record being converted to a corresponding vector based on the corpus. Third, set climate protest as $Y=1$, non-climate protest as $Y=0$, the weight for each term $x_i$ as $k_i$, then $Y_j = \sum_{i=1}^{N} k_i x_i $. By training process, we calculate the weight $k_i$ for each term $x_i$. The last step is test. Given a new GSR description, the probability of classification is:
+$$P(Y = 0| X)= \frac{1}{1+exp( {\sum_{i=1}^{N} k_ix_i})}$$
+$$P(Y = 1| X)= \frac{exp( {\sum_{i=1}^{N} k_ix_i})}{1+exp( {\sum_{i=1}^{N} k_ix_i})}$$
+
+
+We manually labelled 1700 GSR protest records as climate or non-climate protests. Using 70\% dataset as training, and the rest 30\% as test. To ensure we have a trustworthy classification results, we evaluate the performance carefully by cross evaluation. The evaluation criteria are precision (positive predictive value), recall (true positive rate), F-measure (a measure that combines precision and recall) and accuracy (the proportion of true results both true positives and true negatives among the total number of cases examined). We compare with four well-known classification methods: majority assign, K-nearest neighbor, Naive Bayes, and weighted support vector machine (SVM). Since the climate events account for a small portion of all the events, which make it an unbalanced classification problem, so we change the traditional support vector machine into weighted SVM, by adding more importance to the climate portest events (we set the class weight to be 100). From Table~\ref{table:comparision}, we prove our logistic regression method outperforms other methods uniformly.
+
+\paragraph{Conclusion} We build a climate protest classifier based on the logistic linear regression model, which achieves the best performance comparing with other classical classifiers. We analysis the climate related protest both temporally and geographically. Further more, we investigate the climate protest causalities, and show that the shortage of water and electricity tops the climate protests. Finally, we also demonstrate the climate protests patterns.
 
 %}
 
@@ -436,48 +406,6 @@ reprints of this work for Governmental purposes notwithstanding any copyright an
 
 
 \end{document}
-
-
-% If your first paragraph (i.e. with the \dropcap) contains a list environment (quote, quotation, theorem, definition, enumerate, itemize...), the line after the list may have some extra indentation. If this is the case, add \parshape=0 to the end of the list environment.
-
-%\subsection*{Supporting Information (SI)}
-%
-%The main text of the paper must stand on its own without the SI. Refer to SI in the manuscript at an appropriate point in the text. Number supporting figures and tables starting with S1, S2, etc. Authors are limited to no more than 10 SI files, not including movie files. Authors who place detailed materials and methods in SI must provide sufficient detail in the main text methods to enable a reader to follow the logic of the procedures and results and also must reference the online methods. If a paper is fundamentally a study of a new method or technique, then the methods must be described completely in the main text. Because PNAS edits SI and composes it into a single PDF, authors must provide the following file formats only.
-%
-%\subsubsection*{SI Text}
-%
-%Supply Word, RTF, or LaTeX files (LaTeX files must be accompanied by a PDF with the same file name for visual reference).
-%
-%\subsubsection*{SI Figures}
-%
-%Provide a brief legend for each supporting figure after the supporting text. Provide figure images in TIFF, EPS, high-resolution PDF, JPEG, or GIF format; figures may not be embedded in manuscript text. When saving TIFF files, use only LZW compression; do not use JPEG compression. Do not save figure numbers, legends, or author names as part of the image. Composite figures must be pre-assembled.
-%
-%\subsubsection*{3D Figures}
-%
-%Supply a composable U3D or PRC file so that it may be edited and composed. Authors may submit a PDF file but please note it will be published in raw format and will not be edited or composed.
-%
-%\subsubsection*{SI Tables}
-%
-%Supply Word, RTF, or LaTeX files (LaTeX files must be accompanied by a PDF with the same file name for visual reference); include only one table per file. Do not use tabs or spaces to separate columns in Word tables.
-%
-%\subsubsection*{SI Datasets}
-%
-%Supply Excel (.xls), RTF, or PDF files. This file type will be published in raw format and will not be edited or composed.
-%
-%\subsubsection*{SI Movies}
-%
-%Supply Audio Video Interleave (avi), Quicktime (mov), Windows Media (wmv), animated GIF (gif), or MPEG files and submit a brief legend for each movie in a Word or RTF file. All movies should be submitted at the desired reproduction size and length. Movies should be no more than 10 MB in size.
-%
-%\subsubsection*{Still images}
-%
-%Authors must provide a still image from each video file. Supply TIFF, EPS, high-resolution PDF, JPEG, or GIF files.
-%
-%\subsubsection*{Appendices}
-%
-%PNAS prefers that authors submit individual source files to ensure readability. If this is not possible, supply a single PDF file that contains all of the SI associated with the paper. This file type will be published in raw format and will not be edited or composed.
-
-
-
 
 %\begin{figure}[ht]
 %\centerline
@@ -538,3 +466,128 @@ reprints of this work for Governmental purposes notwithstanding any copyright an
 %	\caption{Climate and non-climate protests in Venezuela, from July 2012 to March, 2015. }
 %\label{Venezuela_map}
 %\end{figure}
+
+
+
+%\begin{figure}[ht]
+%\centerline
+%{\includegraphics[width=.3\textwidth]{figures/Brazil}}
+%\caption{Climate and non-climate protests in Brazil, from July 2012 to March, 2015. Red circle represents climate related protest events, and blue circle represents non-climate related protests. }
+%\label{Brazil_map}
+%\end{figure}
+%
+%
+%\begin{figure}[ht]
+%\centerline
+%{\includegraphics[width=.35\textwidth]{figures/Mexico_climate_non-climate}}
+%\caption{Climate and non-climate protests in Mexico, from July 2012 to March, 2015. Red circle represents climate related protest events, and blue circle represents non-climate related protests. }
+%\label{Mexico_map}
+%\end{figure}
+%
+%
+%\begin{figure}[ht]
+%\centerline
+%{\includegraphics[width=.35\textwidth]{figures/Venezuela_climate_non-climate}}
+%\caption{Climate and non-climate protests in Venezuela, from July 2012 to March, 2015. Red circle represents climate related protest events, and blue circle represents non-climate related protests. }
+%\label{Venezuela_map}
+%\end{figure}
+
+
+
+%\begin{figure}[ht]
+%\centerline
+%{\includegraphics[width = 3.5in]{figures/Brazil_cluster}}
+%\caption{Brazil protests clustering results.}
+%\label{Brazil-cluster}
+%\end{figure}
+%
+%\begin{figure}[ht]
+%\centerline
+%{\includegraphics[width = 3.5in]{figures/venezuela-cluster2}}
+%\caption{Venezuela protests clustering results.}
+%\label{Venezuela-cluster}
+%\end{figure}
+%
+%
+%\begin{figure}[ht]
+%\centerline
+%{\includegraphics[width = 3.5in]{figures/Mexico_cluster1}}
+%\caption{Mexico protests clustering results.}
+%\label{Mexico-cluster}
+%\end{figure}
+
+
+
+%\begin{figure}[ht]
+%\centerline
+%{\includegraphics[height=1.4in]{figures/Mexico-diagram2}}
+%\caption{Mexico climate protest causality diagram.}
+%\label{Mexico-causality}
+%\end{figure}
+%
+%
+%\begin{figure}[ht]
+%\centerline
+%{\includegraphics[height=1in, width=2.7in]{figures/Venezuela-diagram2}}
+%\caption{Venezuela climate protest causality diagram.}
+%\label{Venezuela-causality}
+%\end{figure}
+%
+%\begin{figure}[ht]
+%\centerline
+%{\includegraphics[height=1in, width=2.7in]{figures/Brazil-diagram}}
+%\caption{Brazil climate protest causality diagram.}
+%\label{Brazil-causality}
+%\end{figure}
+
+
+%\begin{figure}[ht]
+%\centerline
+%{\includegraphics[width=.3\textwidth]{figures/Mexico-events}}
+%\caption{Climate protest events in Mexico, Sept 2013. Different flag represents different climate disasters. The adjacent world cloud shows Twitter discussion as per that event.}
+%\label{Mexico-events}
+%\end{figure}
+%
+%
+%\begin{figure}[ht]
+%\centerline
+%{\includegraphics[width=.25\textwidth]{figures/Brazil-events}}
+%\caption{Climate protest events in Brazil, May 2012. The adjacent world cloud shows Twitter discussion as per that event.}
+%\label{Brazil-events}
+%\end{figure}
+%
+
+%\begin{figure}[ht]
+%\centerline
+%{\includegraphics[width=.2\textwidth]{figures/GSR}}
+%\caption{GSR protest events in Latin American countries, from November 2012 to August 2014.}
+%\label{GSR}
+%\end{figure}
+
+
+
+
+%\begin{figure}[ht]
+%\centerline
+%{\includegraphics[width=.35\textwidth]{figures/Mexico_disaster2}}
+%\caption{Mexico climate disasters and climate protests. The blue time series shows the climate related protest events, and light red vertical lines show two climate diasters in Mexico, storm Manuel in September 17, 2013 and hurricane Odile in September 15, 2014 respectively.}
+%\label{Mexico_disaster_timeseries}
+%\end{figure}
+%
+%
+%\begin{figure}[ht]
+%\centerline
+%{\includegraphics[width=.35\textwidth]{figures/Brazil_disaster1}}
+%\caption{Brazil climate disasters and climate protests. The blue time series shows the climate related protest events, and light red vertical lines show three climate diasters in Brazil, drought in Feb 2012, Heat wave in Feb 2014, and drought in Oct 2014, respectively.}
+%\label{Brazil_disaster_timeseries}
+%\end{figure}
+%
+%
+%
+%\begin{figure}[ht]
+%\centerline
+%{\includegraphics[width=.4\textwidth]{figures/Venezuela_disaster}}
+%\caption{Venezuela climate disasters and climate protests. The blue time series shows the climate related protest events, and light red vertical lines show flood diasters, and yellow vertical lines drought disasters.}
+%\label{Venezuela_disaster_timeseries}
+%\end{figure}
+
