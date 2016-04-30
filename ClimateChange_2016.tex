@@ -126,19 +126,19 @@ We study 25352 GSR civil unrest events across Latin American countries from July
 \end{figure}
 
 
-\begin{figure}[ht]
-	\centering
-	\subfigure[]{
-		\includegraphics[height=1.25in] {figures/climate_events_per_population}
-		\label{population}
-	}
-	\subfigure[]{
-		\includegraphics[height=1.25in] {figures/climate_events_per_population_density}
-		\label{population-density}
-	}
-	\caption{(a) Climate protest events as per population of each country; (b) Climate protests per population density of each country. }
-\label{population-density}
-\end{figure}
+%\begin{figure}[ht]
+%	\centering
+%	\subfigure[]{
+%		\includegraphics[height=1.25in] {figures/climate_events_per_population}
+%		\label{population}
+%	}
+%	\subfigure[]{
+%		\includegraphics[height=1.25in] {figures/climate_events_per_population_density}
+%		\label{population-density}
+%	}
+%	\caption{(a) Climate protest events as per population of each country; (b) Climate protests per population density of each country. }
+%\label{population-density}
+%\end{figure}
 
 \subsection{Climate protest percentage}
 Among all the 25352 GSR protest events,  991 events are classified into climate-related events. In other words, in Latin American countries, the climate related protests accounts for 3.91\%. As shown in Figure~\ref{month_percentage}, Blue bar shows all the GSR protest events, from the highest amount of Mexico 7354 to lowest country Cost Rica 27; yellow bar shows climate related protest events; the blue area describes the climate related protests percentage over all the GSR protest events. Figure~\ref{map_number} plots the climate related protests events numbers, we can see Mexico has the most climate protests events, as high as 348. And Figure~\ref{map_percentage} gives us a straight view of climate protest percentage, of which, Peru climate protest accounts as high as 25.9\%, Bolivia climate protest percentage reaches as high as 15.3\%, Panama 11.4\% and Guatemala 11.1\% respectively.
@@ -159,59 +159,30 @@ Among all the 25352 GSR protest events,  991 events are classified into climate-
 
 
 \subsection{Spatial distribution}
-We pull out climate and non-climate events location, and show their distribution on the map, as shown in Figure~\ref{Brazil_two_maps},~\ref{Mexico_map},~\ref{Venezuela_map}. Generally, the climate protest distribution is closely correlated with population density, the higher population density area, the more protest events, regardless of climate or non-climate.
-
-%\begin{figure}[ht]
-%\centerline
-%{\includegraphics[width=.35\textwidth]{figures/Brazil}}
-%\caption{Climate and non-climate protests in Brazil, from July 2012 to March, 2015. Red circle represents climate related protest events, and blue circle represents non-climate related protests. }
-%\label{Brazil_map}
-%\end{figure}
-
+We pull out climate and non-climate events location, and show their distribution on the map, as shown in Figure~\ref{Brazil_map},~\ref{Mexico_map},~\ref{Venezuela_map}. Generally, the climate protest distribution is closely correlated with population density, the higher population density area, the more protest events, regardless of climate or non-climate.
 
 \begin{figure}[ht]
-	\centering
-	\subfigure[Climate]{
-		\includegraphics[width=1.4in] {figures/Brazil-climate-map}
-		\label{Brazil_climate}
-	}
-	\subfigure[Non-climate]{
-		\includegraphics[width=1.4in] {figures/Brazil-non-climate-map}
-		\label{Brazil_non-climate}
-	}
-	\caption{Climate and non-climate protests in Brazil, from July 2012 to March, 2015.}
-\label{Brazil_two_maps}
+\centerline
+{\includegraphics[width=.3\textwidth]{figures/Brazil}}
+\caption{Climate and non-climate protests in Brazil, from July 2012 to March, 2015. Red circle represents climate related protest events, and blue circle represents non-climate related protests. }
+\label{Brazil_map}
 \end{figure}
 
 
 
-
 \begin{figure}[ht]
-	\centering
-	\subfigure[Climate]{
-		\includegraphics[width=1.5in] {figures/Mexico_climate}
-		\label{map_Mexico_climate}
-	}
-	\subfigure[Non-climate]{
-		\includegraphics[width=1.5in] {figures/Mexico_non-climate}
-		\label{map_Mexico_non-climate}
-	}
-	\caption{Climate and non-climate protests in Mexico, from July 2012 to March, 2015. }
+\centerline
+{\includegraphics[width=.35\textwidth]{figures/Mexico_climate_non-climate}}
+\caption{Climate and non-climate protests in Mexico, from July 2012 to March, 2015. Red circle represents climate related protest events, and blue circle represents non-climate related protests. }
 \label{Mexico_map}
 \end{figure}
 
 
+
 \begin{figure}[ht]
-	\centering
-	\subfigure[Climate]{
-		\includegraphics[width=1.5in] {figures/Venezuela-climate}
-		\label{map_Venezuela_climate}
-	}
-	\subfigure[Non-climate]{
-		\includegraphics[width=1.5in] {figures/Venezuela-non-climate}
-		\label{map_Venezuela_non-climate}
-	}
-	\caption{Climate and non-climate protests in Venezuela, from July 2012 to March, 2015. }
+\centerline
+{\includegraphics[width=.35\textwidth]{figures/Venezuela_climate_non-climate}}
+\caption{Climate and non-climate protests in Venezuela, from July 2012 to March, 2015. Red circle represents climate related protest events, and blue circle represents non-climate related protests. }
 \label{Venezuela_map}
 \end{figure}
 
@@ -365,13 +336,6 @@ We are also interested in climate events influence on social media, such as Twit
 \end{figure}
 
 
-\begin{figure}[ht]
-\centerline
-{\includegraphics[width = 3in, height=1.5in]{figures/resultsComp1}}
-\caption{Classification methods comparison.}
-\label{resultsComp}
-\end{figure}
-
 
 \paragraph{Climate protest analysis}
 According to the protest content, we cluster each country's protests type. Based on protest descriptions, we calculate two descriptions text similarity, and assign weight between the two protest IDs. Specially, we pay special attention to the protest themes or protest demands, if two descriptions have the same protest demanding, they will have high weight, otherwise, if their protest demanding are different, their connection weight tends to be 0. In this way, we build a weighted undirected network $G(V, E, W)$, with each protest as node $V$, and their connection as edge $E$, their weight as $W$. If the weight between two nodes is 0, their will be no edge. We employ Louvain method~\cite{blondel2008fast} to split the network into several clusters.
@@ -380,6 +344,14 @@ According to the protest content, we cluster each country's protests type. Based
 
 For Venezuela's climate protests, as can be seen in Figure~\ref{Venezuela-cluster}, the yellow cluster which represents lack of water protests accounts for 55.8\%, the green cluster which denotes power outage accounts for 22.1\%, and the blue cluster which stands for gas shortage accounts for 5\%, the purple cluster shows the rest climate protest portion, which include food shortage, medicine shortage, water tank robbery behavior, etc..
 
+
+\begin{figure}[ht]
+\centerline
+{\includegraphics[width = 3.5in]{figures/Brazil_cluster}}
+\caption{Brazil protests clustering results.}
+\label{Brazil-cluster}
+\end{figure}
+
 \begin{figure}[ht]
 \centerline
 {\includegraphics[width = 3.5in]{figures/venezuela-cluster2}}
@@ -387,6 +359,20 @@ For Venezuela's climate protests, as can be seen in Figure~\ref{Venezuela-cluste
 \label{Venezuela-cluster}
 \end{figure}
 
+
+\begin{figure}[ht]
+\centerline
+{\includegraphics[width = 3.5in]{figures/Mexico_cluster1}}
+\caption{Mexico protests clustering results.}
+\label{Mexico-cluster}
+\end{figure}
+
+\begin{figure}[ht]
+\centerline
+{\includegraphics[width = 3in, height=1.5in]{figures/resultsComp1}}
+\caption{Classification methods comparison.}
+\label{resultsComp}
+\end{figure}
 
 \section*{Discussion}
 
@@ -426,6 +412,8 @@ Logisitic Regression & 0.7513 &  0.5102 &  \textbf{0.6018}&  \textbf{0.9322}  \\
 \end{tabular}
 \label{table:comparision}
 \end{table}
+
+
 
 %}
 
@@ -504,4 +492,49 @@ reprints of this work for Governmental purposes notwithstanding any copyright an
 %{\includegraphics[width=.4\textwidth]{figures/Mexico_2014_Odile1}}
 %\caption{Track map of Hurricane Odile of the 2014 Pacific hurricane season. The points show the location of the storm at 6 hour intervals. The colour represents the storm's maximum sustained wind speeds as classified in the Saffir Simpson hurricane wind scale, and the shape of the data points represent the nature of the storm. The map shows population density of all Mexico's 32 states.}
 %\label{storm2014}
+%\end{figure}
+
+%\begin{figure}[ht]
+%	\centering
+%	\subfigure[Climate]{
+%		\includegraphics[width=1.4in] {figures/Brazil-climate-map}
+%		\label{Brazil_climate}
+%	}
+%	\subfigure[Non-climate]{
+%		\includegraphics[width=1.4in] {figures/Brazil-non-climate-map}
+%		\label{Brazil_non-climate}
+%	}
+%	\caption{Climate and non-climate protests in Brazil, from July 2012 to March, 2015.}
+%\label{Brazil_two_maps}
+%\end{figure}
+
+
+%\begin{figure}[ht]
+%	\centering
+%	\subfigure[Climate]{
+%		\includegraphics[width=1.5in] {figures/Mexico_climate}
+%		\label{map_Mexico_climate}
+%	}
+%	\subfigure[Non-climate]{
+%		\includegraphics[width=1.5in] {figures/Mexico_non-climate}
+%		\label{map_Mexico_non-climate}
+%	}
+%	\caption{Climate and non-climate protests in Mexico, from July 2012 to March, 2015. }
+%\label{Mexico_map}
+%\end{figure}
+
+
+
+%\begin{figure}[ht]
+%	\centering
+%	\subfigure[Climate]{
+%		\includegraphics[width=1.5in] {figures/Venezuela-climate}
+%		\label{map_Venezuela_climate}
+%	}
+%	\subfigure[Non-climate]{
+%		\includegraphics[width=1.5in] {figures/Venezuela-non-climate}
+%		\label{map_Venezuela_non-climate}
+%	}
+%	\caption{Climate and non-climate protests in Venezuela, from July 2012 to March, 2015. }
+%\label{Venezuela_map}
 %\end{figure}
