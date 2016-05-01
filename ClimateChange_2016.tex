@@ -1,7 +1,7 @@
 \documentclass[9pt,twocolumn,twoside]{pnas-new}
 \usepackage{subfigure}
 % Use the lineno option to display guide line numbers if required.
-% Note that the use of elements such as single-column equations
+% Note that the use of elements such as single-column \emph{?}quations
 % may affect the guide line number alignment.
 
 \usepackage{color}
@@ -103,8 +103,6 @@ However, even this path of climate effects on income level leading to conflict i
 
 
 \section*{3. Climate Protests Overview}
-We study 25352 GSR civil unrest events across Latin American countries from July 2011 to March 2015. We build a climate change protest classifier, aim to identify how many civil unrest events are caused by climate change or extreme weathers.
-
 
 \begin{figure}[ht]
 \centerline
@@ -122,23 +120,6 @@ We study 25352 GSR civil unrest events across Latin American countries from July
 \end{figure}
 
 
-%\begin{figure}[ht]
-%	\centering
-%	\subfigure[]{
-%		\includegraphics[height=1.25in] {figures/climate_events_per_population}
-%		\label{population}
-%	}
-%	\subfigure[]{
-%		\includegraphics[height=1.25in] {figures/climate_events_per_population_density}
-%		\label{population-density}
-%	}
-%	\caption{(a) Climate protest events as per population of each country; (b) Climate protests per population density of each country. }
-%\label{population-density}
-%\end{figure}
-
-\subsection{3.1 Climate protest distribution}
-Among all the 25352 GSR protest events,  991 events are classified into climate-related events. In other words, in Latin American countries, the climate related protests accounts for 3.91\%. As shown in Figure~\ref{month_percentage}, Blue bar shows all the GSR protest events, from the highest amount of Mexico 7354 to lowest country Cost Rica 27; yellow bar shows climate related protest events; the blue area describes the climate related protests percentage over all the GSR protest events. Figure~\ref{map_number} plots the climate related protests events numbers, we can see Mexico has the most climate protests events, as high as 348. And Figure~\ref{map_percentage} gives us a straight view of climate protest percentage, of which, Peru climate protest accounts as high as 25.9\%, Bolivia climate protest percentage reaches as high as 15.3\%, Panama 11.4\% and Guatemala 11.1\% respectively.
-
 \begin{figure}[ht]
 	\centering
 	\subfigure[]{
@@ -154,8 +135,12 @@ Among all the 25352 GSR protest events,  991 events are classified into climate-
 \end{figure}
 
 
-\subsection{3.2 Spatial distribution}
-We pull out climate and non-climate events location, and show their distribution on the map, as shown in Figure~\ref{climate-map}. Generally, the climate protest distribution is closely correlated with population density, the higher population density area, the more protest events, regardless of climate or non-climate.
+We study 25352 GSR civil unrest events across Latin American countries from July 2011 to March 2015. We build a climate change protest classifier, aim to identify how many civil unrest events are caused by climate change or extreme weathers. Among all the 25352 GSR protest events,  991 events are classified into climate-related events. In other words, in Latin American countries, the climate related protests accounts for 3.91\%. As shown in Figure~\ref{month_percentage}, Blue bar shows all the GSR protest events, from the highest amount of Mexico 7354 to lowest country Cost Rica 27; yellow bar shows climate related protest events; the blue area describes the climate related protests percentage over all the GSR protest events. Figure~\ref{map_number} plots the climate related protests events numbers, we can see Mexico has the most climate protests events, as high as 348. And Figure~\ref{map_percentage} gives us a straight view of climate protest percentage, of which, Peru climate protest accounts as high as 25.9\%, Bolivia climate protest percentage reaches as high as 15.3\%, Panama 11.4\% and Guatemala 11.1\% respectively.
+
+Countries like Mexico, Brazil, and Venezuela have both high none-climate and climate protests, and their climate percentile rates are roughly stable around 4 \%. 
+We pull out these three countries' climate and non-climate events location, and show their distribution on the map, as shown in Figure~\ref{climate-map}. Interestingly, climate protests in Brazil mainly center at two major cities, Sao Paulo, and Rio de Janerio. While for Mexico and Venezuela, the climate protest city happens in most cities uniformly. Probably, it is because that the climate protest distribution is closely correlated with population density, the higher population density area, the more protest events, regardless of climate or non-climate. We can also see from Figure~\ref{month_percentage}, countries like Panama, Honduras, Nicaragua, Guyana and Cost Rica, have both low none-climate and climate protests. This is probably because these countries have smaller population, suffer less natural disasters, and better governance.
+
+
 
 \begin{figure*}[ht]
 	\centering
@@ -175,17 +160,38 @@ We pull out climate and non-climate events location, and show their distribution
 \label{climate-map}
 \end{figure*}
 
+We investigate the protest event time series in South American. As shown in Figure 3, on average, February, March, and May see the most climate-related protest events, while November has the less. We can also see the for the none-climate protest, the temporal distribution is different since it see most protest in July. This is because there are more climate disasters than other months. This is consist with the statistic data concerning the natural disasters in South American.
 
 
-\subsection{3.3 Protest time interval deviation}
-Figure~\ref{Mexico-deviation} shows Mexico climate and non-climate protests time interval distribution. We found the non-climate protests have very high percentage with small time interval, less than three days. The climate protests, on the contrary, time interval is longer than non-climate protests.
+%\begin{figure}[ht]
+%	\centering
+%	\subfigure[]{
+%		\includegraphics[height=1.25in] {figures/climate_events_per_population}
+%		\label{population}
+%	}
+%	\subfigure[]{
+%		\includegraphics[height=1.25in] {figures/climate_events_per_population_density}
+%		\label{population-density}
+%	}
+%	\caption{(a) Climate protest events as per population of each country; (b) Climate protests per population density of each country. }
+%\label{population-density}
+%\end{figure}
 
-\begin{figure}[ht]
-\centerline
-{\includegraphics[width=.3\textwidth]{figures/Mexico_deviation}}
-\caption{Mexico climate and non-climate protests time interval deviation. Blue curve shows the non-climate protest time intervals percentage, and red curve shows climate protest time interval percentage.}
-\label{Mexico-deviation}
-\end{figure}
+
+
+
+
+
+
+%\subsection{3.3 Protest time interval deviation}
+%Figure~\ref{Mexico-deviation} shows Mexico climate and non-climate protests time interval distribution. We found the non-climate protests have very high percentage with small time interval, less than three days. The climate protests, on the contrary, time interval is longer than non-climate protests.
+%
+%\begin{figure}[ht]
+%\centerline
+%{\includegraphics[width=.3\textwidth]{figures/Mexico_deviation}}
+%\caption{Mexico climate and non-climate protests time interval deviation. Blue curve shows the non-climate protest time intervals percentage, and red curve shows climate protest time interval percentage.}
+%\label{Mexico-deviation}
+%\end{figure}
 
 
 \section*{4. Climate protests causality}
@@ -256,7 +262,7 @@ After the storm Manuel, related protests and other civil unrest events break out
 		\label{Venezuela_disaster_timeseries}
 	}
 	\caption{(a) Mexico climate disasters and climate protests. The blue time series shows the climate related protest events, and light red vertical lines show two climate diasters in Mexico, storm Manuel in September 17, 2013 and hurricane Odile in September 15, 2014 respectively. (b)Brazil climate disasters and climate protests. The blue time series shows the climate related protest events, and light red vertical lines show three climate diasters in Brazil, drought in Feb 2012, Heat wave in Feb 2014, and drought in Oct 2014, respectively. (c) Venezuela climate disasters and climate protests. The blue time series shows the climate related protest events, and light red vertical lines show flood diasters, and yellow vertical lines drought disasters.}
-\label{climate-map}
+\label{climate-timeseries}
 \end{figure*}
 
 
@@ -371,6 +377,15 @@ Logisitic Regression & 0.7513 &  0.5102 &  \textbf{0.6018}&  \textbf{0.9322}  \\
 
 
 \section*{Discussion}
+
+
+\begin{figure}[ht]
+\centerline
+{\includegraphics[width = 3.5in]{figures/gsr_event_json.png}}
+\caption{Classification methods comparison.}
+\label{resultsComp}
+\end{figure}
+
 
 %\matmethods{
 %Please describe your materials and methods here. This can be more than one paragraph, and may contain subsections and equations as required. Authors should include a statement in the methods section describing how readers will be able to access the data in the paper.
@@ -546,7 +561,7 @@ reprints of this work for Governmental purposes notwithstanding any copyright an
 %\begin{figure}[ht]
 %\centerline
 %{\includegraphics[width=.3\textwidth]{figures/Mexico-events}}
-%\caption{Climate protest events in Mexico, Sept 2013. Different flag represents different climate disasters. The adjacent world cloud shows Twitter discussion as per that event.}
+%\caption{Climate protest events in Mexico, Sept 2013. Different flag represents different climate disasters. The adjacent world cloud shows Twitter nnn as per that event.}
 %\label{Mexico-events}
 %\end{figure}
 %
