@@ -212,7 +212,7 @@ However, what is the specific protest reasons, how is the proportion of each pro
 
 
 \subsection*{4.3 Climate protests causality analysis}
-The causality analysis is based on three steps, as described following. 
+The causality analysis is based on three steps, as described following.
 
 \begin{figure}[ht]
 	\centering
@@ -233,7 +233,7 @@ The causality analysis is based on three steps, as described following.
 \end{figure}
 
 
-a. Text enrichment. 
+a. Text enrichment.
 Messages with textual content (Tweets, Newsfeeds, Blog postings, etc.) are subjected to shallow linguistic processing prior to analysis. Applying BASIS technologies' Rosette Language Processing (RLP) tools, the language of the text is identified, the natural language content is tokenized and lemmatized and the named entities identified and classified. Finally, messages are geocoded with a specification of the location (city, state, country), being talked about in the message.
 
 b. Construct knowledge graph
@@ -245,10 +245,10 @@ The general extraction patterns rule is Noun Phrase - Verb Phrase - Noun Phrase.
 
 With all the enriched articles as input, since their named entities and verb phrases being identified and classified, the system can automatically extract the structural knowledge and load them into Graph database. It worths to note the entities may evolve along space and time.
 
-c. Query knowledge graph to identify causality. 
+c. Query knowledge graph to identify causality.
 With a complete knowledge database, we are going to poses domain specific questions, for example, who are the main players in the article? what are the reasons for the protest? To such questions like that, we are seeking causal (base) relations between concepts. Specifically, we are interested in entities to be storm, hurricane, heat, draught, etc,, climate related keywords. By matching the object or subject with climate related keywords, and predicate to be causality relationship like result of, cause by, lead to, blamed, accused of, demanding, we can locate and further identify the event-specific descriptors, get the relations between concepts (players and protest keywords) or relations of base type - temporal, change state, explicit facts.
 
-match (a)-[relations]-(b) where a.name =~ '.*climate.*', and a.relations =~ '.*cuase.*'  return a, relations, b. We are interested in relations like 'cause', 'demanding', 'against', 'request', and so on.  
+match (a)-[relations]-(b) where a.name =~ '.*climate.*', and a.relations =~ '.*cuase.*'  return a, relations, b. We are interested in relations like 'cause', 'demanding', 'against', 'request', and so on.
 
 
 For some severe and dominant climate events, such as storm, hurricane, flood, and drought events, we use the knowledge graph to identify their evolution pattern, thus from climate disasters, how does it evolve into armed conflicts? As shown in Figure~\ref{three-causality}, we illustrate storm caused protests demands in Mexico, blackout caused protest demands in Venezuela, and drought caused protest demands in Brazil.
@@ -321,6 +321,10 @@ Figure~\ref{Venezuela_disaster_timeseries} shows Venezuela climate disasters and
 According to the protest content, we cluster each country's protests type. Based on protest descriptions, we calculate two descriptions text similarity, and assign weight between the two protest IDs. Specially, we pay special attention to the protest themes or protest demands, if two descriptions have the same protest demanding, they will have high weight, otherwise, if their protest demanding are different, their connection weight tends to be 0. In this way, we build a weighted undirected network $G(V, E, W)$, with each protest as node $V$, and their connection as edge $E$, their weight as $W$. If the weight between two nodes is 0, their will be no edge. We employ Louvain method~\cite{blondel2008fast} to split the network into several clusters.
 
 
+For Brazil's climate protests, as can be seen in Figure~\ref{Brazil_cluster}, the purple cluster which represents land ownership accounts the most part, 26.7\%, the green cluster which denotes lack of water accounts 20.7\%, farmers cluster accounts 13.8\%. The interesting thing is land and farmers clusters are closely coherent. Amazon rainforest is another striking protest which accounts for 11.3\%.
+
+For Mexico's climate protests, as shown in Figure~\ref{Mexico_cluster}, the rose red cluster which denotes lack of water is the most dominant protest, accounts for 20.5\%, the green cluster tropical storm is the second largest protest type, 19.0\%, the dark blue cluster construction accounts for 17\%, and the yellow cluster land accounts for 11.8\%. The interesting thing is, water protest is intertwined with environment protest and power protest, land protest is closely related with farmers, while construction cluster is coherent with baby blue cluster (2.6\%) which denotes homes.
+ 
 
 For Venezuela's climate protests, as can be seen in Figure~\ref{Venezuela_cluster}, the yellow cluster which represents lack of water protests accounts for 55.8\%, the green cluster which denotes power outage accounts for 22.1\%, and the blue cluster which stands for gas shortage accounts for 5\%, the purple cluster shows the rest climate protest portion, which include food shortage, medicine shortage, water tank robbery behavior, etc..
 
