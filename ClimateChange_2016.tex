@@ -70,16 +70,15 @@ In this analysis, we focus on the breadth of the climate events by looking at ev
 By developing a logistic regression classifier, 25352 GSR civil unrest events were classified as either being climate or non-climate related using terms in the description of the event.
 
 
-NEXT... WHAT DID WE FIND???
-{\color{red}
-NOTE: THERE ARE A LOT OF FIGURES - these are observations - BUT WE NEED TO DRAW CONCLUSIONS. WHAT DO YOU LEARN FROM THESE FIGURES? HOW CAN YOU MAKE QUANTIFIABLE COMPARISONS? WHAT INTERESTING THINGS DO YOU FIND IN THE DATA. CURRENTLY, THERE IS SPATIAL, (TEMPORAL?), and ``CAUSALITY''. PLEASE TRY TO THINK ABOUT WAYS TO CHARACTERIZE THE DIFFERENCES/SIMILARITIES BETWEEN CLIMATE/NON-CLIMATE PROTESTS. ALSO, HOW WOULD YOU COMPARE ACROSS THE 3 COUNTRIES YOU'VE ANALYSED?}
+%NEXT... WHAT DID WE FIND???
+%{\color{red}
+%NOTE: THERE ARE A LOT OF FIGURES - these are observations - BUT WE NEED TO DRAW CONCLUSIONS. WHAT DO YOU LEARN FROM THESE FIGURES? HOW CAN YOU MAKE QUANTIFIABLE COMPARISONS? WHAT INTERESTING THINGS DO YOU FIND IN THE DATA. CURRENTLY, THERE IS SPATIAL, (TEMPORAL?), and ``CAUSALITY''. PLEASE TRY TO THINK ABOUT WAYS TO CHARACTERIZE THE DIFFERENCES/SIMILARITIES BETWEEN CLIMATE/NON-CLIMATE PROTESTS. ALSO, HOW WOULD YOU COMPARE ACROSS THE 3 COUNTRIES YOU'VE ANALYSED?}
 
 \begin{itemize}
   \item First, we develop a logistic regression classifier, which can classify climate protests from non-climate protests automatically based on protest events description.
   \item Second, we analyze the climate protest spikes and disclose its relationship with climate disasters. For example, we plot the climate protests time series in Mexico and Brazil, and overlay with corresponding climate disasters, found for storm and hurricane events in Mexico, the protest time line last much longer. However, for drought events in Brazil, the protests being initiated more swift, also last shorter time.
   \item Thirdly, we figure out the proportion of protest causality. By studying some major climate disasters, we also discover each protest category's demands.
-  \item Finally, We investigate the climate cocurrence. For instance, the water related protests are often accompanies with electricity shortage.
-while land protest are often isolated reasons.
+  \item Finally, We investigate the climate co-occurrence. For instance, the water related protests are often accompanies with electricity shortage, while land ownership protests are often isolated reasons.
 \end{itemize}
 %
 
@@ -96,9 +95,9 @@ The pathway to civil unrest is also not limited to a local region, where one stu
 The pathways of food prices to protest have also been studied in the global south~\cite{RW4}, Africa, and Asia~\cite{wischnath2014climate,RW6}.
 However, even this path of climate effects on income level leading to conflict is not eminently clear~\cite{RW10}.
 
-{\color{red} This second paragraph will discuss work more related to the specific conclusions that we draw... we don't have these yet. Or do we? Anyway cite Hsiang here...}
-
-{\color{red} Protest work w/ EMBERS and related programs. Tools available for use. Brian to add in using text/refs similar to his other protest papers.}
+%{\color{red} This second paragraph will discuss work more related to the specific conclusions that we draw... we don't have these yet. Or do we? Anyway cite Hsiang here...}
+%
+%{\color{red} Protest work w/ EMBERS and related programs. Tools available for use. Brian to add in using text/refs similar to his other protest papers.}
 
 
 
@@ -209,7 +208,7 @@ We investigate the protest event time series in South American. As shown in Figu
 
 
 \subsection{4. Climate disasters and climate protests}
-For the climate protests, we intend to find out what kind of climate disasters trigger them, What is the interaction between climate change and civil unrest, and how is the character of time span for different climate events. With the aid of International Disaster Database EMDAT~\footnote{http://www.emdat.be/database}, World Disasters Timeline~\footnote{http://www.mapreport.com/} and European Commission's Humanitarian Aid and Civil Protection department (ECHO)~\footnote{http://ec.europa.eu/echo/}, we query the official climate disaster report for each country and overlay with climate related protests, as shown in Figure~\ref{climate-timeseries}.
+For the climate protests, we intend to find out what kind of climate disasters trigger them, what is the interaction between climate change and civil unrest, and how is the character of time span for different climate events. With the aid of International Disaster Database EMDAT~\footnote{http://www.emdat.be/database}, World Disasters Timeline~\footnote{http://www.mapreport.com/} and European Commission's Humanitarian Aid and Civil Protection department (ECHO)~\footnote{http://ec.europa.eu/echo/}, we query the official climate disaster report for each country and overlay with climate related protests, as shown in Figure~\ref{climate-timeseries}.
 
 
 \paragraph{Mexico climate disasters}
@@ -335,17 +334,21 @@ For some severe and dominant climate events, such as storm, hurricane, flood, an
 
 
 \paragraph{6. Climate protest pattern}
-According to the protest content, we cluster each country's protests type. Based on protest descriptions, we calculate two descriptions text similarity, and assign weight between the two protest IDs. Specially, we pay special attention to the protest themes or protest demands, if two descriptions have the same protest demanding, they will have high weight, otherwise, if their protest demanding are different, their connection weight tends to be 0. In this way, we build a weighted undirected network $G(V, E, W)$, with each protest as node $V$, and their connection as edge $E$, their weight as $W$. If the weight between two nodes is 0, their will be no edge. We employ Louvain method~\cite{blondel2008fast} to split the network into several clusters.
+After identifying protests causalities, we are also interested in discovering the coherent correlations of climate protests causalities. Is there any protest pattern behind? What is the proportion of each protest type? What is the co-occurrence of protest types? According to the protest content, we cluster each country's protests type. Based on protest descriptions, we calculate their text similarity, and assign weight between two protest IDs. Specially, we pay attention to the protest themes or protest demands, either subject or object, if two descriptions have the same protest demanding, they will have high weight, otherwise, if their protest demanding are different, their connection weight tends to be 0. In this way, we build a weighted undirected network $G(V, E, W)$, with each protest as node $V$, and their connection as edge $E$, their weight as $W$. If the weight between two nodes is 0, there will be no edge. We employ Louvain method~\cite{blondel2008fast} to split the network into several clusters.
 
 
-For Brazil's climate protests, as can be seen in Figure~\ref{Brazil_cluster}, the purple cluster which represents land ownership accounts the most part, 26.7\%, the green cluster which denotes lack of water accounts 20.7\%, farmers cluster accounts 13.8\%. The interesting thing is land and farmers clusters are closely coherent. Amazon rainforest is another striking protest which accounts for 11.3\%.
+For Brazil's climate protests, as can be seen in Figure~\ref{Brazil_cluster}, the purple cluster which represents land ownership accounts for the most part, 26.7\%, the green cluster which denotes lack of water takes up 20.7\%, farmers cluster occupies 13.8\%. The interesting thing is land and farmers clusters are closely coherent. Amazon rainforest is another striking protest which is responsible for 11.3\%.
 
-For Mexico's climate protests, as shown in Figure~\ref{Mexico_cluster}, the rose red cluster which denotes lack of water is the most dominant protest, accounts for 20.5\%, the green cluster tropical storm is the second largest protest type, 19.0\%, the dark blue cluster construction accounts for 17\%, and the yellow cluster land accounts for 11.8\%. The interesting thing is, water protest is intertwined with environment protest and power protest, land protest is closely related with farmers, while construction cluster is coherent with baby blue cluster (2.6\%) which denotes homes.
-
-
-For Venezuela's climate protests, as can be seen in Figure~\ref{Venezuela_cluster}, the yellow cluster which represents lack of water protests accounts for 55.8\%, the green cluster which denotes power outage accounts for 22.1\%, and the blue cluster which stands for gas shortage accounts for 5\%, the purple cluster shows the rest climate protest portion, which include food shortage, medicine shortage, water tank robbery behavior, etc..
+For Mexico's climate protests, as shown in Figure~\ref{Mexico_cluster}, the rose red cluster which denotes lack of water is the most dominant protest, accounts for 20.5\%, the green cluster tropical storm is the second largest protest type, takes up 19.0\%, the dark blue cluster construction accounts for 17\%, and the yellow cluster land is responsible for 11.8\%. The interesting thing is, water protest is intertwined with environment protest and power protest, land protest is closely related with farmers, while construction cluster is coherent with baby blue cluster (2.6\%) which denotes homes.
 
 
+For Venezuela's climate protests, as can be seen in Figure~\ref{Venezuela_cluster}, the yellow cluster which represents lack of water protests takes up as high as 55.8\%, the green cluster which denotes power outage accounts for 22.1\%, and the blue cluster which stands for gas shortage accounts for 5\%, the purple cluster shows the rest climate protest portion, which include food shortage, medicine shortage, water tank robbery behavior, etc..
+
+
+\paragraph{7. Climate protests in Twitter}
+We are also interested in climate events influence on social media, such as Twitter. Using keywords list we are able to filter tweets, then cluster tweets into different partitions based on similarity among tweets using distance function, taking tweets content, geolocation and other features into consideration. 
+
+Events Clustering is used to separate events happened at same place or at same time, or the separate different events happened simultaneously on local and entire country. By measure the distance among tweets based on similarity, tweets collection can be clustered into subsets in which tweets are exactly related and similar. Each partition includes similar tweets stand for a specific event. Without events clustering, different events will be mixed. As shown in Figure~\ref{Mexico-events}, Mexico Hurricane were mixed with severe drought happen in Culiacan, with the aid of event clustering, we are able to distinguish those distinct extreme weather events, even though they may happen at the same time. For each event, we plot the related Tweets word cloud besides the flag. Figure~\ref{Brazil-events} illustrates four drought events in Brazil, on May 2012. 
 
 \begin{figure}[t]
 	\centering
@@ -360,10 +363,6 @@ For Venezuela's climate protests, as can be seen in Figure~\ref{Venezuela_cluste
 	\caption{Climate protest events in Mexico, Sept 2013 and Brazil, May 2012. Different flag represents different climate disasters. The adjacent world cloud shows Twitter discussion as per that event. }
 \label{Twitter-events}
 \end{figure}
-
-\paragraph{7. Climate protests in Twitter}
-We are also interested in climate events influence on social media, such as Twitter. Using keywords list we are able to filter tweets, then cluster tweets into different partitions based on similarity among tweets using distance function, taking tweets content, geolocation and other features into consideration. Each partition includes similar tweets stand for a specific event. As shown in Figure~\ref{Mexico-events}, there are three distinct extreme weather event type in Mexico in different locations, the word cloud shows discussion on Twitter as per that event.
-
 
 %\begin{figure}[ht]
 %\centerline
@@ -419,7 +418,7 @@ Logisitic Regression & 0.7513 &  0.5102 &  \textbf{0.6018}&  \textbf{0.9322}  \\
 \end{table}
 
 
-\paragraph{Conclusion} We build a climate protest classifier based on the logistic linear regression model, which achieves the best performance comparing with other classical classifiers. We analysis the climate related protest both temporally and geographically. Further more, we investigate the climate protest causalities, and show that the shortage of water and electricity tops the climate protests. Finally, we also demonstrate the climate protests patterns and its influence on twitter.
+\paragraph{Conclusion} This paper firstly build a climate protest classifier, which achieves the best performance comparing with other classical classifiers. The rest analysis is based upon the classification results. This paper gives an overview of Latin American countries climate protests distributions, both temporally and geographically. More importantly, this paper use the third party climate diaster records, overlay with climate protests. On the one hand, by showing the climate diasters and its subsequent climate protests, we prove the classification result is reasonable. On the other hand, it discloses the protests time span for major climate diasters. Another distinguishing contribution is, by constructing knowledge graph, this paper disclose the protest causalities, and discovery the climate protests evolution pattern, from climate events to climate protests. Another contribution is, by clustering description content, this paper shows the climate protest patterns in Latin American countries, such as in Venezuela, the majority protests are against lacking of water, which has high co-occurrence with protests against power outage. Finally, we analyze climate protests influence in Twitter, by building event clusters, we are able to separate events happened at same place or at same time. 
 
 }
 
