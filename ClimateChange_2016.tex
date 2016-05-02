@@ -42,7 +42,7 @@
 \textit{Abstract goes here.}
 \end{abstract}
 
-\dates{This manuscript was compiled on \today}
+%\dates{This manuscript was compiled on \today}
 \doi{\url{www.pnas.org/cgi/doi/10.1073/pnas.XXXXXXXXXX}}
 
 \begin{document}
@@ -54,7 +54,7 @@
 \maketitle
 \thispagestyle{firststyle}
 \ifthenelse{\boolean{shortarticle}}{\ifthenelse{\boolean{singlecolumn}}{\abscontentformatted}{\abscontent}}{}
-\section{1. Introduction}
+\section{Introduction}
 \dropcap{C}limate change, extreme weather, and the state of the environment directly impact the availability of food \cite{RW3}, energy \cite{}, and shelter \cite{}.
 As finite resources become scarce, the residual impacts on local economies can have disastrous and long-lasting effects on the fundamental livelihoods of inhabitants for decades \cite{}.
 In some cases, the resulting instability can severely detriment the ability of an established political system to maintain peace.
@@ -74,6 +74,8 @@ By developing a logistic regression classifier, 25352 GSR civil unrest events we
 %{\color{red}
 %NOTE: THERE ARE A LOT OF FIGURES - these are observations - BUT WE NEED TO DRAW CONCLUSIONS. WHAT DO YOU LEARN FROM THESE FIGURES? HOW CAN YOU MAKE QUANTIFIABLE COMPARISONS? WHAT INTERESTING THINGS DO YOU FIND IN THE DATA. CURRENTLY, THERE IS SPATIAL, (TEMPORAL?), and ``CAUSALITY''. PLEASE TRY TO THINK ABOUT WAYS TO CHARACTERIZE THE DIFFERENCES/SIMILARITIES BETWEEN CLIMATE/NON-CLIMATE PROTESTS. ALSO, HOW WOULD YOU COMPARE ACROSS THE 3 COUNTRIES YOU'VE ANALYSED?}
 
+
+Generally, the main contribution of this paper can be summarized as:
 \begin{itemize}
   \item First, we develop a logistic regression classifier, which can classify climate protests from non-climate protests automatically based on protest events description.
   \item Second, we analyze the climate protest spikes and disclose its relationship with climate disasters. For example, we plot the climate protests time series in Mexico and Brazil, and overlay with corresponding climate disasters, found for storm and hurricane events in Mexico, the protest time line last much longer. However, for drought events in Brazil, the protests being initiated more swift, also last shorter time.
@@ -86,7 +88,7 @@ By developing a logistic regression classifier, 25352 GSR civil unrest events we
 
 %
 %
-\section{2. Related research}
+\section{Related research}
 The path from climate, extreme weather and environmental effects to civil unrest is causally complex \cite{hsiang2011civil,RW5} and involves various combinations of climate change \cite{burke2014climate}, natural resources, human security, and social stability.
 In general, sensitivities to climate change, exposure to climate change, and the ability of a society to adapt are indicators of whether or not violence will erupt~\cite{RW9}.
 A commonly studied pathway is the effect of climate on food prices which then induces civil unrest.
