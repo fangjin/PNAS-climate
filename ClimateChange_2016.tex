@@ -137,21 +137,22 @@ However, even this path of climate effects on income level leading to conflict i
 
 We study 25352 GSR civil unrest events across Latin American countries from July 2011 to March 2015. We build a climate change protest classifier, aim to identify how many civil unrest events are caused by climate change or extreme weathers. Among all the 25352 GSR protest events,  991 events are classified into climate-related events. In other words, in Latin American countries, the climate related protests accounts for 3.91\%. As shown in Figure~\ref{month_percentage}, Blue bar shows all the GSR protest events, from the highest amount of Mexico 7354 to lowest country Cost Rica 27; yellow bar shows climate related protest events; the blue area describes the climate related protests percentage over all the GSR protest events. Figure~\ref{map_number} plots the climate related protests events numbers, we can see Mexico has the most climate protests events, as high as 348. And Figure~\ref{map_percentage} gives us a straight view of climate protest percentage, of which, Peru climate protest accounts as high as 25.9\%, Bolivia climate protest percentage reaches as high as 15.3\%, Panama 11.4\% and Guatemala 11.1\% respectively.
 
-Countries like Mexico, Brazil, and Venezuela have both high none-climate and climate protests, and their climate percentile rates are roughly stable around 4 \%. 
+Countries like Mexico, Brazil, and Venezuela have both high none-climate and climate protests, and their climate percentile rates are roughly stable around 4 \%.
 We pull out these three countries' climate and non-climate events location, and show their distribution on the map, as shown in Figure~\ref{climate-map}. Interestingly, climate protests in Brazil mainly center at two major cities, Sao Paulo, and Rio de Janerio. While for Mexico and Venezuela, the climate protest city happens in most cities uniformly. Probably, it is because that the climate protest distribution is closely correlated with population density, the higher population density area, the more protest events, regardless of climate or non-climate. We can also see from Figure~\ref{month_percentage}, countries like Panama, Honduras, Nicaragua, Guyana and Cost Rica, have both low none-climate and climate protests. This is probably because these countries have smaller population, suffer less natural disasters, and better governance.
 
 
+We investigate the protest event time series in South American. As shown in Figure 3, on average, February, March, and May see the most climate-related protest events, while November has the less. We can also see the for the none-climate protest, the temporal distribution is different since it see most protest in July. This is because there are more climate disasters than other months. This is consist with the statistic data concerning the natural disasters in South American.
 
 \begin{figure*}[ht]
 	\centering
+    \subfigure[Mexico]{
+		\includegraphics[height=1.4in] {figures/Mexico_climate_non-climate}
+		\label{Mexico_map}
+    }
 	\subfigure[Brazil]{
 		\includegraphics[height=1.6in] {figures/Brazil}
 		\label{Brazil_map}
 	}
-	\subfigure[Mexico]{
-		\includegraphics[height=1.4in] {figures/Mexico_climate_non-climate}
-		\label{Mexico_map}
-}
 	\subfigure[Venezuela]{
 		\includegraphics[height=1.5in] {figures/Venezuela_climate_non-climate}
 		\label{Venezuela_map}
@@ -159,8 +160,6 @@ We pull out these three countries' climate and non-climate events location, and 
 	\caption{Climate and non-climate protests from July 2012 to March, 2015. Red circle represents climate related protest events, and blue circle represents non-climate related protests. }
 \label{climate-map}
 \end{figure*}
-
-We investigate the protest event time series in South American. As shown in Figure 3, on average, February, March, and May see the most climate-related protest events, while November has the less. We can also see the for the none-climate protest, the temporal distribution is different since it see most protest in July. This is because there are more climate disasters than other months. This is consist with the statistic data concerning the natural disasters in South American.
 
 
 %\begin{figure}[ht]
@@ -179,10 +178,6 @@ We investigate the protest event time series in South American. As shown in Figu
 
 
 
-
-
-
-
 %\subsection{3.3 Protest time interval deviation}
 %Figure~\ref{Mexico-deviation} shows Mexico climate and non-climate protests time interval distribution. We found the non-climate protests have very high percentage with small time interval, less than three days. The climate protests, on the contrary, time interval is longer than non-climate protests.
 %
@@ -193,84 +188,6 @@ We investigate the protest event time series in South American. As shown in Figu
 %\label{Mexico-deviation}
 %\end{figure}
 
-
-\section*{4. Climate protests causality}
-\begin{figure}[ht]
-\centerline
-{\includegraphics[width=.35\textwidth]{figures/Climate_word_cloud}}
-\caption{Word cloud of all the climate related protests, from GSR descriptions.}
-\label{wordcloud}
-\end{figure}
-
-
-\subsection*{4.1 Word cloud}
-Of the climate related protests, we are interested in what are the protesters demanding. To have a birds view of climate protests, we extract all the climate protest descriptions and plot the word cloud, as shows in Figure~\ref{wordcloud}. We can see words like `water', `storm', `mining', `rain', `construction', `power', `heat', `gas', `environment', `electricity', and other weather, environment related keywords are dominant, which gives us a general idea of what are protesters demanding.
-
-\subsection*{4.2 Climate protests proportion}
-However, what is the specific protest reasons, how is the proportion of each protest category? We build a classifier to categorize the climate protest types, which generally falls into nine categories. As can be seen in Figure~\ref{causality}, the most dominant two categories are environment concern and lack of water. After that, the third commonest reason is about power, blackout. Also, extreme weathers like storm, hurricane, drought also accounts a considerable portion. The interesting thing is, each country has its own distinguishing protest features. In Mexico, the most notable protest reasons are lack of water, environment concern, storm and hurricane. In Venezuela, apart from lack of water, environment problem, the dominant reasons are about blackout and energy issue. In Peru, more than half of climate protests are demanding mining project, which is related with environment concern. While in Argentina, 35\% events protest against blackout issue.
-
-\begin{figure}[ht]
-\centerline
-{\includegraphics[width=.4\textwidth]{figures/causality1}}
-\caption{Climate protest causality diagram. Left bar shows ten countries' climate protest numbers, and right bar shows nine climate event categories which cause climate protests.}
-\label{causality}
-\end{figure}
-
-
-\subsection*{4.3 Climate protests causality analysis}
-The causality analysis is based on three steps, as described following.
-
-\begin{figure}[ht]
-	\centering
-	\subfigure[Mexico]{
-		\includegraphics[width=3in] {figures/Mexico-diagram2}
-		\label{Mexico_causality}
-	}
-	\subfigure[Brazil]{
-		\includegraphics[width=1.5in, height=0.9in] {figures/Brazil-diagram}
-		\label{Brazil_causality}
-	}
-    \subfigure[Venezuela]{
-		\includegraphics[width=1.5in, height=0.9in] {figures/Venezuela-diagram2}
-		\label{Venezuela_causality}
-    }
-	\caption{Climate protest causality diagram}
-\label{three-causality}
-\end{figure}
-
-
-a. Text enrichment.
-Messages with textual content (Tweets, Newsfeeds, Blog postings, etc.) are subjected to shallow linguistic processing prior to analysis. Applying BASIS technologies' Rosette Language Processing (RLP) tools, the language of the text is identified, the natural language content is tokenized and lemmatized and the named entities identified and classified. Finally, messages are geocoded with a specification of the location (city, state, country), being talked about in the message.
-
-b. Construct knowledge graph
-In the scope of this study, an entity network is a graph $G(E, R)$ where entities $E = {e_1,
-. . ., e_n}$ can be linked to one another through relationships $R = {r_1, . . ., r_n}$ defined by conceptual interactions, and thus called a knowledge graph. knowledge graphs are used to represent its logic based on semantic networks.
-
-How to represent knowledge and extract entities and their relationship from text?
-The general extraction patterns rule is Noun Phrase - Verb Phrase - Noun Phrase. We can also employ multilingual rules for phrase patterns learnt using association mining based on collocations. Using an open source, GraphDb (Neo4j) to store and query knowledge triples. Neo4j is a very robust, scalable solution for Knowledge representation, which provides an expressive query language : CYPHER, and a framework for implementing graph theoretic search algorithms. The general scheme is Subject Predicate Object. Subject is a concept, which can be person, organization, location, event, noun phrase; Predicate can be either a verb action or (predefined) relation type; Object can be either a concept or (some) value.
-
-With all the enriched articles as input, since their named entities and verb phrases being identified and classified, the system can automatically extract the structural knowledge and load them into Graph database. It worths to note the entities may evolve along space and time.
-
-c. Query knowledge graph to identify causality.
-With a complete knowledge database, we are going to poses domain specific questions, for example, who are the main players in the article? what are the reasons for the protest? To such questions like that, we are seeking causal (base) relations between concepts. Specifically, we are interested in entities to be storm, hurricane, heat, draught, etc,, climate related keywords. By matching the object or subject with climate related keywords, and predicate to be causality relationship like result of, cause by, lead to, blamed, accused of, demanding, we can locate and further identify the event-specific descriptors, get the relations between concepts (players and protest keywords) or relations of base type - temporal, change state, explicit facts.
-
-match (a)-[relations]-(b) where a.name =~ '.*climate.*', and a.relations =~ '.*cuase.*'  return a, relations, b. We are interested in relations like 'cause', 'demanding', 'against', 'request', and so on.
-
-
-For some severe and dominant climate events, such as storm, hurricane, flood, and drought events, we use the knowledge graph to identify their evolution pattern, thus from climate disasters, how does it evolve into armed conflicts? As shown in Figure~\ref{three-causality}, we illustrate storm caused protests demands in Mexico, blackout caused protest demands in Venezuela, and drought caused protest demands in Brazil.
-
-
-
-\subsection{5. Climate disasters and climate protests}
-We are also wondering, what is the interaction between climate change and civil unrest, how the climate change events evolves into social movements, what is the time span?
-
-\paragraph{Mexico climate disasters}
-Let us see an example of Mexico climate disasters and protests, as shown in Figure~\ref{Mexico_disaster_timeseries}. One major climate disaster occurred in September 17, 2013, tropical storms Manuel and Ingrid hit Mexico, more than 23,000 people fled their homes in the state due to heavy rains spawned by what had been Hurricane Ingrid, and 9,000 went to emergency shelters, at least 20 highways and 12 bridges had been damaged.
-
-
-After the storm Manuel, related protests and other civil unrest events break out dozens of times, and lasts for more than two years because the government's response had been desperately inadequate. The related protest reached  climax in January 2014, and second climax in April 2014. We can see on November 19, 2013, there was report saying `it's been 63 days since the onslaught of `Ingrid' and `Manuel' and families were left homeless are still without help'. On January 22, 2014, news reporting `Cards require delivery of goods. Four months after the storm `Manuel' and the effects of Hurricane `Ingrid', they say `we have not received anything'.'. On April 7, protest description saying `Affected by Tropical Storm `Manuel' in the municipal head of Tixtla marched to demand the construction of a controlled channel, it will prevent a flood like that caused the overflow from the Black Lagoon in September 2013'. The related climate protests descriptions are shown in Figure~\ref{Manuel_word_cloud}.
-
-%~\footnote{https://weather.com/storms/hurricane/news/tropical-storm-manuel-hurricane-ingrid-hit-mexico-opposite-coasts-20130916}.
 
 \begin{figure*}[ht]
 	\centering
@@ -286,19 +203,18 @@ After the storm Manuel, related protests and other civil unrest events break out
 		\includegraphics[height=1.3in] {figures/Venezuela_disaster}
 		\label{Venezuela_disaster_timeseries}
 	}
-	\caption{(a) Mexico climate disasters and climate protests. The blue time series shows the climate related protest events, and light red vertical lines show two climate diasters in Mexico, storm Manuel in September 17, 2013 and hurricane Odile in September 15, 2014 respectively. (b)Brazil climate disasters and climate protests. The blue time series shows the climate related protest events, and light red vertical lines show three climate diasters in Brazil, drought in Feb 2012, Heat wave in Feb 2014, and drought in Oct 2014, respectively. (c) Venezuela climate disasters and climate protests. The blue time series shows the climate related protest events, and light red vertical lines show flood diasters, and yellow vertical lines drought disasters.}
+	\caption{(a) Mexico climate disasters and climate protests. The blue time series shows the climate related protest events, and light red vertical lines show two storm diasters in Mexico, storm Manuel in September 17, 2013 and hurricane Odile in September 15, 2014 respectively. (b)Brazil climate disasters and climate protests. The blue time series shows the climate related protest events, and yellow vertical lines show three drought diasters in Brazil, drought in Feb 2012, Heat wave in Feb 2014, and drought in Oct 2014, respectively. (c) Venezuela climate disasters and climate protests. The blue time series shows the climate related protest events, and rose vertical line show local area flood diaster, and yellow vertical lines drought disasters.}
 \label{climate-timeseries}
 \end{figure*}
 
 
+\subsection{4. Climate disasters and climate protests}
+For the climate protests, we intend to find out what kind of climate disasters trigger them, What is the interaction between climate change and civil unrest, and how is the character of time span for different climate events. With the aid of International Disaster Database EMDAT~\footnote{http://www.emdat.be/database}, World Disasters Timeline~\footnote{http://www.mapreport.com/} and European Commission's Humanitarian Aid and Civil Protection department (ECHO)~\footnote{http://ec.europa.eu/echo/}, we query the official climate disaster report for each country and overlay with climate related protests, as shown in Figure~\ref{climate-timeseries}.
 
-\begin{figure}[ht]
-\centerline
-{\includegraphics[width=.3\textwidth]{figures/Mexico_Manuel_wordcloud}}
-\caption{Word cloud of Mexico storm Manuel, Sept 13, 2013.}
-\label{Manuel_word_cloud}
-\end{figure}
 
+\paragraph{Mexico climate disasters}
+Figure~\ref{Mexico_disaster_timeseries} shows Mexico climate disasters and protests, the blue time series represent the climate protests events, and the two red bar shows two storm disasters. The first red bar represents tropical storms Manuel (category 1) and Ingrid in September 17, 2013, whose track map can be seen in Figure~\ref{storm2013}. The storm Manael crossed west coast of Mexico, results in more than 23,000 people fled their homes due to heavy rains spawned by what had been Hurricane Ingrid, and 9,000 went to emergency shelters, at least 20 highways and 12 bridges had been damaged~\footnote{https://weather.com/storms/hurricane/news/tropical-storm-manuel-hurricane-ingrid-hit-mexico-opposite-coasts-20130916}.
+After the storm Manuel, related protests and other civil unrest events break out dozens of times, and lasts for more than two years because the government's response had been desperately inadequate. The related protest reached climax in January 2014, and second climax in April 2014. We can see on November 19, 2013, there was report saying `it's been 63 days since the onslaught of `Ingrid' and `Manuel' and families were left homeless are still without help'. On January 22, 2014, news reporting `Cards require delivery of goods. Four months after the storm `Manuel' and the effects of Hurricane `Ingrid', they say `we have not received anything'. On April 7, protest description saying `Affected by Tropical Storm `Manuel' in the municipal head of Tixtla marched to demand the construction of a controlled channel, it will prevent a flood like that caused the overflow from the Black Lagoon in September 2013'. All those kind of protests caused by storm Manuel, we plot its descriptions in word cloud, as shows in Figure~\ref{Manuel_word_cloud}.
 
 \begin{figure}[ht]
 	\centering
@@ -314,13 +230,88 @@ After the storm Manuel, related protests and other civil unrest events break out
 \label{Mexico-track-map}
 \end{figure}
 
-The interesting thing is, after hurricane Odile 2014, there was not many related protests. Why of the two storms in Mexico, storm Manuel 2013 caused a series of climate protests, but storm Odile 2014 did not cause considerable protests? Storm 2014 belongs to category 3, much severe than storm 2013 (which belongs to category 1). However, from Figure~\ref{Mexico-track-map}, we can see storm Manuel 2013 is very close with Mexico's residence area, while hurricane Odile 2014 is far from Mexico coast, even though it cross some part of Mexico, but the population density there is very low. This can explain why storm 2013 lead to tremendous protests, while hurricane 2014 does not.
+
+\begin{figure}[ht]
+\centerline
+{\includegraphics[width=.3\textwidth]{figures/Mexico_Manuel_wordcloud}}
+\caption{Word cloud of Mexico storm Manuel, Sept 13, 2013.}
+\label{Manuel_word_cloud}
+\end{figure}
+
+
+In Figure~\ref{Mexico_disaster_timeseries}, the second red bar shows hurricane Odile 2014, belongs to category 3, whose track map can be seen in Figure~\ref{storm2014}. The interesting thing is, after hurricane Odile 2014, the more intense storm, there were not many related protests. Why? By checking Figure~\ref{Mexico-track-map}, we can see storm Manuel 2013 hit Mexico's mainland, which make it very destructive. While hurricane Odile 2014 caused lesser impacts on the Mexican mainland, even though it cross the state of Baja California Sur, however, it is the second smallest Mexican state by population. This can explain why storm 2013 lead to tremendous protests, while hurricane 2014 does not.
 
 \paragraph{Brazil climate disasters}
-Figure~\ref{Brazil_disaster_timeseries} shows Brazil climate disasters and climate protests relationship. The three red bar shows three drought events in Brazil, which caused drought related protests immediately. The drought in February 2012 hampered production, which arouse farmers protest. The heat wave in February in 2014, and drought in October 2014 results in water shortage, thus a series of protest abrupt in Brazil. The biggest spike in June 2013 are protests against government's projects for the construction of hydroelectric plants in the Amazon region, which can be ascribed into environment category.
+Figure~\ref{Brazil_disaster_timeseries} shows Brazil climate disasters and climate protests relationship. The three yellow bar shows three drought events in Brazil, which caused drought related protests immediately. The drought in February 2012 hampered production, which arouse farmers protest. The heat wave in February in 2014, and drought in October 2014 results in water shortage, thus a series of protests against water shortage abrupt in Brazil. The biggest spike in June 2013 described protests against government's projects for the construction of hydroelectric plants in the Amazon region, which can be ascribed into environment category.
 
 
-Figure~\ref{Venezuela_disaster_timeseries} shows Venezuela climate disasters and climate protests relationship. In June 2013, sudden torrential rains, a phenomenon associated with climate change, cause a heightened risk of flooding and landslides in the densely populated communities on the outskirts of Caracas. In May 2014, a drought has triggered rationing of tap water in the capital, Caracas, where residents must form lines that last hours to fill jugs of water for drinking, showering, and other needs.
+\paragraph{Venezuela climate disasters}
+In Figure~\ref{Venezuela_disaster_timeseries}, the blue curve shows Venezuela climate related protests time series, and  vertical bars represent climate diasters. The rose bar represents sudden torrential rains in June 2013, caused a heightened risk of flooding and landslides in the densely populated communities on the outskirts of Caracas, and triggered a small portion of protests prevent flooding. The yellow bars denote drought disasters, of which the highest bar, represents a drought in May 2014, which triggered rationing of tap water in the capital, Caracas, where residents must form lines that last hours to fill jugs of water. This drought diaster lasted so long that related protests reached climax in September 2014. 
+
+
+\section*{5. Climate protests causality}
+\begin{figure}[ht]
+\centerline
+{\includegraphics[width=.35\textwidth]{figures/Climate_word_cloud}}
+\caption{Word cloud of all the climate related protests, from GSR descriptions.}
+\label{wordcloud}
+\end{figure}
+
+
+\subsection*{5.1 Word cloud}
+Of the climate related protests, we are interested in what are the protesters demanding. To have a birds view of climate protests, we extract all the climate protest descriptions and plot the word cloud, as shows in Figure~\ref{wordcloud}. We can see words like `water', `storm', `mining', `rain', `construction', `power', `heat', `gas', `environment', `electricity', and other weather, environment related keywords are dominant, which gives us a general idea of what protesters are demanding.
+
+\subsection*{5.2 Climate protests proportion}
+However, how is the proportion of each protest category, is still unclear. We build a classifier to categorize the climate protest types, which generally falls into nine categories. As can be seen in Figure~\ref{causality}, the most dominant two categories are environment concern and lack of water. After that, the third commonest reason is about power, blackout. Also, extreme weathers like storm, hurricane, drought also accounts a considerable portion. The interesting thing is, each country has its own distinguishing protest features. In Mexico, the most notable protest reasons are lack of water, environment concern, storm and hurricane. In Venezuela, apart from lack of water, environment problem, the dominant reasons are about blackout and energy issue. In Peru, more than half of climate protests are demanding mining project, which is related with environment concern. While in Argentina, 35\% events protest against blackout issue.
+
+\begin{figure}[ht]
+\centerline
+{\includegraphics[width=.4\textwidth]{figures/causality1}}
+\caption{Climate protest causality diagram. Left bar shows ten countries' climate protest numbers, and right bar shows nine climate event categories which cause climate protests.}
+\label{causality}
+\end{figure}
+
+
+\subsection*{5.3 Climate protests causality analysis}
+More importantly, we intend to figure out the protests causality, how does the climate events involve into protests. The causality analysis is based on three steps, as described following.
+
+\begin{figure}[ht]
+	\centering
+	\subfigure[Mexico]{
+		\includegraphics[width=3.2in] {figures/Mexico-diagram2}
+		\label{Mexico_causality}
+	}
+	\subfigure[Brazil]{
+		\includegraphics[width=1.55in, height=0.7in] {figures/Brazil-diagram}
+		\label{Brazil_causality}
+	}
+    \subfigure[Venezuela]{
+		\includegraphics[width=1.55in, height=0.7in] {figures/Venezuela-diagram2}
+		\label{Venezuela_causality}
+    }
+	\caption{Climate protest causality diagram}
+\label{three-causality}
+\end{figure}
+
+
+a. Text enrichment.
+Messages with textual content (Tweets, Newsfeeds, Blog postings, etc.) are subjected to shallow linguistic processing prior to analysis. Applying BASIS technologies' Rosette Language Processing (RLP) tools, the language of the text is identified, the natural language content is tokenized and lemmatized and the named entities identified and classified. Finally, messages are geocoded with a specification of the location (city, state, country), being talked about in the message.
+
+b. Knowledge graph construction.
+In the scope of this study, an entity network is a graph $G(E, R)$ where entities $E = {e_1,
+. . ., e_n}$ can be linked to one another through relationships $R = {r_1, . . ., r_n}$ defined by conceptual interactions, and thus called a knowledge graph. knowledge graphs are used to represent its logic based on semantic networks.
+How to represent knowledge and extract entities and their relationship from text?
+The general extraction patterns rule is Noun Phrase - Verb Phrase - Noun Phrase. We can also employ multilingual rules for phrase patterns learnt using association mining based on collocations. Using an open source, GraphDb (Neo4j) to store and query knowledge triples.
+%Neo4j is a very robust, scalable solution for Knowledge representation, which provides an expressive query language : CYPHER, and a framework for implementing graph theoretic search algorithms.
+The general scheme is Subject - Predicate - Object. Subject is a concept, which can be person, organization, location, event, noun phrase; Predicate can be either a verb action or (predefined) relation type; Object can be either a concept or (some) value. With all the enriched articles as input, since their named entities and verb phrases being identified and classified, the system can automatically extract the structural knowledge and load them into Graph database. It worths to note the entities may evolve along space and time.
+
+c. Causality query.
+With a complete knowledge database, we are going to poses domain specific questions, for example, who are the main players in the article? what are the reasons for the protest? To such questions like that, we are seeking causal (base) relations between concepts. Specifically, we are interested in entities to be storm, hurricane, heat, draught, etc,, climate related keywords. By matching the object or subject with climate related keywords, and predicate to be causality relationship like result of, cause by, lead to, blamed, accused of, demanding, against, request, we can locate and further identify the event-specific descriptors, get the relations between concepts (players and protest keywords) or relations of base type - temporal, change state, explicit facts.
+
+%match (a)-[relations]-(b) where a.name =~ '.*climate.*', and a.relations =~ '.*cuase.*'  return a, relations, b. We are interested in relations like 'cause', 'demanding', 'against', 'request', and so on.
+
+
+For some severe and dominant climate events, such as storm, hurricane, flood, and drought events, we use the knowledge graph to identify their evolution pattern, thus from climate disasters, how does it evolve into armed conflicts? As shown in Figure~\ref{three-causality}, we illustrate storm caused protests demands in Mexico, blackout caused protest demands in Venezuela, and drought caused protest demands in Brazil.
 
 
 \paragraph{6. Climate protest pattern}
@@ -330,7 +321,7 @@ According to the protest content, we cluster each country's protests type. Based
 For Brazil's climate protests, as can be seen in Figure~\ref{Brazil_cluster}, the purple cluster which represents land ownership accounts the most part, 26.7\%, the green cluster which denotes lack of water accounts 20.7\%, farmers cluster accounts 13.8\%. The interesting thing is land and farmers clusters are closely coherent. Amazon rainforest is another striking protest which accounts for 11.3\%.
 
 For Mexico's climate protests, as shown in Figure~\ref{Mexico_cluster}, the rose red cluster which denotes lack of water is the most dominant protest, accounts for 20.5\%, the green cluster tropical storm is the second largest protest type, 19.0\%, the dark blue cluster construction accounts for 17\%, and the yellow cluster land accounts for 11.8\%. The interesting thing is, water protest is intertwined with environment protest and power protest, land protest is closely related with farmers, while construction cluster is coherent with baby blue cluster (2.6\%) which denotes homes.
- 
+
 
 For Venezuela's climate protests, as can be seen in Figure~\ref{Venezuela_cluster}, the yellow cluster which represents lack of water protests accounts for 55.8\%, the green cluster which denotes power outage accounts for 22.1\%, and the blue cluster which stands for gas shortage accounts for 5\%, the purple cluster shows the rest climate protest portion, which include food shortage, medicine shortage, water tank robbery behavior, etc..
 
