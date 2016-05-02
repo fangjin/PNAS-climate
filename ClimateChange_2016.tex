@@ -239,17 +239,6 @@ After the storm Manuel, related protests and other civil unrest events break out
 \end{figure}
 
 
-In Figure~\ref{Mexico_disaster_timeseries}, the second red bar shows hurricane Odile 2014, belongs to category 3, whose track map can be seen in Figure~\ref{storm2014}. The interesting thing is, after hurricane Odile 2014, the more intense storm, there were not many related protests. Why? By checking Figure~\ref{Mexico-track-map}, we can see storm Manuel 2013 hit Mexico's mainland, which make it very destructive. While hurricane Odile 2014 caused lesser impacts on the Mexican mainland, even though it cross the state of Baja California Sur, however, it is the second smallest Mexican state by population. This can explain why storm 2013 lead to tremendous protests, while hurricane 2014 does not.
-
-\paragraph{Brazil climate disasters}
-Figure~\ref{Brazil_disaster_timeseries} shows Brazil climate disasters and climate protests relationship. The three yellow bar shows three drought events in Brazil, which caused drought related protests immediately. The drought in February 2012 hampered production, which arouse farmers protest. The heat wave in February in 2014, and drought in October 2014 results in water shortage, thus a series of protests against water shortage abrupt in Brazil. The biggest spike in June 2013 described protests against government's projects for the construction of hydroelectric plants in the Amazon region, which can be ascribed into environment category.
-
-
-\paragraph{Venezuela climate disasters}
-In Figure~\ref{Venezuela_disaster_timeseries}, the blue curve shows Venezuela climate related protests time series, and  vertical bars represent climate diasters. The rose bar represents sudden torrential rains in June 2013, caused a heightened risk of flooding and landslides in the densely populated communities on the outskirts of Caracas, and triggered a small portion of protests prevent flooding. The yellow bars denote drought disasters, of which the highest bar, represents a drought in May 2014, which triggered rationing of tap water in the capital, Caracas, where residents must form lines that last hours to fill jugs of water. This drought diaster lasted so long that related protests reached climax in September 2014. 
-
-
-\section*{5. Climate protests causality}
 \begin{figure}[ht]
 \centerline
 {\includegraphics[width=.35\textwidth]{figures/Climate_word_cloud}}
@@ -257,23 +246,31 @@ In Figure~\ref{Venezuela_disaster_timeseries}, the blue curve shows Venezuela cl
 \label{wordcloud}
 \end{figure}
 
+In Figure~\ref{Mexico_disaster_timeseries}, the second red bar shows hurricane Odile 2014, belongs to category 3, whose track map can be seen in Figure~\ref{storm2014}. The interesting thing is, after hurricane Odile 2014, the more intense storm, there were not many related protests. Why? By checking Figure~\ref{Mexico-track-map}, we can see storm Manuel 2013 hit Mexico's mainland, which make it very destructive. While hurricane Odile 2014 caused lesser impacts on the Mexican mainland, even though it cross the state of Baja California Sur, however, it is the second smallest Mexican state by population. This can explain why storm 2013 lead to tremendous protests, while hurricane 2014 does not.
+
+\paragraph{Brazil climate disasters}
+Figure~\ref{Brazil_disaster_timeseries} shows Brazil climate disasters and climate protests relationship. The three yellow bar shows three drought events in Brazil, which caused drought related protests immediately. The drought in February 2012 hampered production, which arouse farmers protest. The heat wave in February in 2014, and drought in October 2014 results in water shortage, thus a series of protests against water shortage abrupt in Brazil. The biggest spike in June 2013 described protests against government's projects for the construction of hydroelectric plants in the Amazon region, which can be ascribed into environment category.
+
+
+\paragraph{Venezuela climate disasters}
+In Figure~\ref{Venezuela_disaster_timeseries}, the blue curve shows Venezuela climate related protests time series, and  vertical bars represent climate diasters. The rose bar represents sudden torrential rains in June 2013, caused a heightened risk of flooding and landslides in the densely populated communities on the outskirts of Caracas, and triggered a small portion of protests prevent flooding. The yellow bars denote drought disasters, of which the highest bar, represents a drought in May 2014, which triggered rationing of tap water in the capital, Caracas, where residents must form lines that last hours to fill jugs of water. This drought diaster lasted so long that related protests reached climax in September 2014.
+
+
+\section*{5. Climate protests causality}
 
 \subsection*{5.1 Word cloud}
 Of the climate related protests, we are interested in what are the protesters demanding. To have a birds view of climate protests, we extract all the climate protest descriptions and plot the word cloud, as shows in Figure~\ref{wordcloud}. We can see words like `water', `storm', `mining', `rain', `construction', `power', `heat', `gas', `environment', `electricity', and other weather, environment related keywords are dominant, which gives us a general idea of what protesters are demanding.
 
-\subsection*{5.2 Climate protests proportion}
-However, how is the proportion of each protest category, is still unclear. We build a classifier to categorize the climate protest types, which generally falls into nine categories. As can be seen in Figure~\ref{causality}, the most dominant two categories are environment concern and lack of water. After that, the third commonest reason is about power, blackout. Also, extreme weathers like storm, hurricane, drought also accounts a considerable portion. The interesting thing is, each country has its own distinguishing protest features. In Mexico, the most notable protest reasons are lack of water, environment concern, storm and hurricane. In Venezuela, apart from lack of water, environment problem, the dominant reasons are about blackout and energy issue. In Peru, more than half of climate protests are demanding mining project, which is related with environment concern. While in Argentina, 35\% events protest against blackout issue.
-
-\begin{figure}[ht]
+\begin{figure}[t]
 \centerline
 {\includegraphics[width=.4\textwidth]{figures/causality1}}
 \caption{Climate protest causality diagram. Left bar shows ten countries' climate protest numbers, and right bar shows nine climate event categories which cause climate protests.}
 \label{causality}
 \end{figure}
 
+\subsection*{5.2 Climate protests proportion}
+However, how is the proportion of each protest category, is still unclear. We build a classifier to categorize the climate protest types, which generally falls into nine categories. As can be seen in Figure~\ref{causality}, the most dominant two categories are environment concern and lack of water. After that, the third commonest reason is about power, blackout. Also, extreme weathers like storm, hurricane, drought also accounts a considerable portion. The interesting thing is, each country has its own distinguishing protest features. In Mexico, the most notable protest reasons are lack of water, environment concern, storm and hurricane. In Venezuela, apart from lack of water, environment problem, the dominant reasons are about blackout and energy issue. In Peru, more than half of climate protests are demanding mining project, which is related with environment concern. While in Argentina, 35\% events protest against blackout issue.
 
-\subsection*{5.3 Climate protests causality analysis}
-More importantly, we intend to figure out the protests causality, how does the climate events involve into protests. The causality analysis is based on three steps, as described following.
 
 \begin{figure}[ht]
 	\centering
@@ -294,36 +291,6 @@ More importantly, we intend to figure out the protests causality, how does the c
 \end{figure}
 
 
-a. Text enrichment.
-Messages with textual content (Tweets, Newsfeeds, Blog postings, etc.) are subjected to shallow linguistic processing prior to analysis. Applying BASIS technologies' Rosette Language Processing (RLP) tools, the language of the text is identified, the natural language content is tokenized and lemmatized and the named entities identified and classified. Finally, messages are geocoded with a specification of the location (city, state, country), being talked about in the message.
-
-b. Knowledge graph construction.
-In the scope of this study, an entity network is a graph $G(E, R)$ where entities $E = {e_1,
-. . ., e_n}$ can be linked to one another through relationships $R = {r_1, . . ., r_n}$ defined by conceptual interactions, and thus called a knowledge graph. knowledge graphs are used to represent its logic based on semantic networks.
-How to represent knowledge and extract entities and their relationship from text?
-The general extraction patterns rule is Noun Phrase - Verb Phrase - Noun Phrase. We can also employ multilingual rules for phrase patterns learnt using association mining based on collocations. Using an open source, GraphDb (Neo4j) to store and query knowledge triples.
-%Neo4j is a very robust, scalable solution for Knowledge representation, which provides an expressive query language : CYPHER, and a framework for implementing graph theoretic search algorithms.
-The general scheme is Subject - Predicate - Object. Subject is a concept, which can be person, organization, location, event, noun phrase; Predicate can be either a verb action or (predefined) relation type; Object can be either a concept or (some) value. With all the enriched articles as input, since their named entities and verb phrases being identified and classified, the system can automatically extract the structural knowledge and load them into Graph database. It worths to note the entities may evolve along space and time.
-
-c. Causality query.
-With a complete knowledge database, we are going to poses domain specific questions, for example, who are the main players in the article? what are the reasons for the protest? To such questions like that, we are seeking causal (base) relations between concepts. Specifically, we are interested in entities to be storm, hurricane, heat, draught, etc,, climate related keywords. By matching the object or subject with climate related keywords, and predicate to be causality relationship like result of, cause by, lead to, blamed, accused of, demanding, against, request, we can locate and further identify the event-specific descriptors, get the relations between concepts (players and protest keywords) or relations of base type - temporal, change state, explicit facts.
-
-%match (a)-[relations]-(b) where a.name =~ '.*climate.*', and a.relations =~ '.*cuase.*'  return a, relations, b. We are interested in relations like 'cause', 'demanding', 'against', 'request', and so on.
-
-
-For some severe and dominant climate events, such as storm, hurricane, flood, and drought events, we use the knowledge graph to identify their evolution pattern, thus from climate disasters, how does it evolve into armed conflicts? As shown in Figure~\ref{three-causality}, we illustrate storm caused protests demands in Mexico, blackout caused protest demands in Venezuela, and drought caused protest demands in Brazil.
-
-
-\paragraph{6. Climate protest pattern}
-According to the protest content, we cluster each country's protests type. Based on protest descriptions, we calculate two descriptions text similarity, and assign weight between the two protest IDs. Specially, we pay special attention to the protest themes or protest demands, if two descriptions have the same protest demanding, they will have high weight, otherwise, if their protest demanding are different, their connection weight tends to be 0. In this way, we build a weighted undirected network $G(V, E, W)$, with each protest as node $V$, and their connection as edge $E$, their weight as $W$. If the weight between two nodes is 0, their will be no edge. We employ Louvain method~\cite{blondel2008fast} to split the network into several clusters.
-
-
-For Brazil's climate protests, as can be seen in Figure~\ref{Brazil_cluster}, the purple cluster which represents land ownership accounts the most part, 26.7\%, the green cluster which denotes lack of water accounts 20.7\%, farmers cluster accounts 13.8\%. The interesting thing is land and farmers clusters are closely coherent. Amazon rainforest is another striking protest which accounts for 11.3\%.
-
-For Mexico's climate protests, as shown in Figure~\ref{Mexico_cluster}, the rose red cluster which denotes lack of water is the most dominant protest, accounts for 20.5\%, the green cluster tropical storm is the second largest protest type, 19.0\%, the dark blue cluster construction accounts for 17\%, and the yellow cluster land accounts for 11.8\%. The interesting thing is, water protest is intertwined with environment protest and power protest, land protest is closely related with farmers, while construction cluster is coherent with baby blue cluster (2.6\%) which denotes homes.
-
-
-For Venezuela's climate protests, as can be seen in Figure~\ref{Venezuela_cluster}, the yellow cluster which represents lack of water protests accounts for 55.8\%, the green cluster which denotes power outage accounts for 22.1\%, and the blue cluster which stands for gas shortage accounts for 5\%, the purple cluster shows the rest climate protest portion, which include food shortage, medicine shortage, water tank robbery behavior, etc..
 
 
 \begin{figure*}[ht]
@@ -345,12 +312,42 @@ For Venezuela's climate protests, as can be seen in Figure~\ref{Venezuela_cluste
 \end{figure*}
 
 
+\subsection*{5.3 Climate protests causality analysis}
+More importantly, we intend to figure out the protests causality, how does the climate events involve into protests. The causality analysis is based on three steps, as described following.
 
-\paragraph{7. Climate protests in Twitter}
-We are also interested in climate events influence on social media, such as Twitter. Using keywords list we are able to filter tweets, then cluster tweets into different partitions based on similarity among tweets using distance function, taking tweets content, geolocation and other features into consideration. Each partition includes similar tweets stand for a specific event. As shown in Figure~\ref{Mexico-events}, there are three distinct extreme weather event type in Mexico in different locations, the word cloud shows discussion on Twitter as per that event.
+a. Text enrichment.
+Messages with textual content (Tweets, Newsfeeds, Blog postings, etc.) are subjected to shallow linguistic processing prior to analysis. Applying BASIS technologies' Rosette Language Processing (RLP) tools, the language of the text is identified, the natural language content is tokenized and lemmatized and the named entities identified and classified. Finally, messages are geocoded with a specification of the location (city, state, country), being talked about in the message.
+
+b. Knowledge graph construction.
+In the scope of this study, an entity network is a graph $G(E, R)$ where entities $E = {e_1,
+. . ., e_n}$ can be linked to one another through relationships $R = {r_1, . . ., r_n}$ defined by conceptual interactions, and thus called a knowledge graph. knowledge graphs are used to represent its logic based on semantic networks.
+How to represent knowledge and extract entities and their relationship from text?
+The general extraction patterns rule is Noun Phrase - Verb Phrase - Noun Phrase. We can also employ multilingual rules for phrase patterns learnt using association mining based on collocations. Using an open source, GraphDb (Neo4j) to store and query knowledge triples.
+%Neo4j is a very robust, scalable solution for Knowledge representation, which provides an expressive query language : CYPHER, and a framework for implementing graph theoretic search algorithms.
+The general scheme is Subject - Predicate - Object. Subject is a concept, which can be person, organization, location, event, noun phrase; Predicate can be either a verb action or (predefined) relation type; Object can be either a concept or (some) value. With all the enriched articles as input, since their named entities and verb phrases being identified and classified, the system can automatically extract the structural knowledge and load them into Graph database. It worths to note the entities may evolve along space and time.
+
+c. Causality query.
+With a complete knowledge database, we are going to poses domain specific questions, for example, who are the main players in the article? what are the reasons for the protest? To such questions like that, we are seeking causal (base) relations between concepts. Specifically, we are interested in entities to be storm, hurricane, heat, draught, etc,, climate related keywords. By matching the object or subject with climate related keywords, and predicate to be causality relationship like result of, cause by, lead to, blamed, accused of, demanding, against, request, we can locate and further identify the event-specific descriptors, get the relations between concepts (players and protest keywords) or relations of base type - temporal, change state, explicit facts.
+
+%match (a)-[relations]-(b) where a.name =~ '.*climate.*', and a.relations =~ '.*cuase.*'  return a, relations, b. We are interested in relations like 'cause', 'demanding', 'against', 'request', and so on.
+
+For some severe and dominant climate events, such as storm, hurricane, flood, and drought events, we use the knowledge graph to identify their evolution pattern, thus from climate disasters, how does it evolve into armed conflicts? As shown in Figure~\ref{three-causality}, we illustrate storm caused protests demands in Mexico, blackout caused protest demands in Venezuela, and drought caused protest demands in Brazil.
 
 
-\begin{figure}[ht]
+\paragraph{6. Climate protest pattern}
+According to the protest content, we cluster each country's protests type. Based on protest descriptions, we calculate two descriptions text similarity, and assign weight between the two protest IDs. Specially, we pay special attention to the protest themes or protest demands, if two descriptions have the same protest demanding, they will have high weight, otherwise, if their protest demanding are different, their connection weight tends to be 0. In this way, we build a weighted undirected network $G(V, E, W)$, with each protest as node $V$, and their connection as edge $E$, their weight as $W$. If the weight between two nodes is 0, their will be no edge. We employ Louvain method~\cite{blondel2008fast} to split the network into several clusters.
+
+
+For Brazil's climate protests, as can be seen in Figure~\ref{Brazil_cluster}, the purple cluster which represents land ownership accounts the most part, 26.7\%, the green cluster which denotes lack of water accounts 20.7\%, farmers cluster accounts 13.8\%. The interesting thing is land and farmers clusters are closely coherent. Amazon rainforest is another striking protest which accounts for 11.3\%.
+
+For Mexico's climate protests, as shown in Figure~\ref{Mexico_cluster}, the rose red cluster which denotes lack of water is the most dominant protest, accounts for 20.5\%, the green cluster tropical storm is the second largest protest type, 19.0\%, the dark blue cluster construction accounts for 17\%, and the yellow cluster land accounts for 11.8\%. The interesting thing is, water protest is intertwined with environment protest and power protest, land protest is closely related with farmers, while construction cluster is coherent with baby blue cluster (2.6\%) which denotes homes.
+
+
+For Venezuela's climate protests, as can be seen in Figure~\ref{Venezuela_cluster}, the yellow cluster which represents lack of water protests accounts for 55.8\%, the green cluster which denotes power outage accounts for 22.1\%, and the blue cluster which stands for gas shortage accounts for 5\%, the purple cluster shows the rest climate protest portion, which include food shortage, medicine shortage, water tank robbery behavior, etc..
+
+
+
+\begin{figure}[t]
 	\centering
 	\subfigure[Mexico]{
 		\includegraphics[width=1.6in, height=1.3in] {figures/Mexico-events}
@@ -364,6 +361,9 @@ We are also interested in climate events influence on social media, such as Twit
 \label{Twitter-events}
 \end{figure}
 
+\paragraph{7. Climate protests in Twitter}
+We are also interested in climate events influence on social media, such as Twitter. Using keywords list we are able to filter tweets, then cluster tweets into different partitions based on similarity among tweets using distance function, taking tweets content, geolocation and other features into consideration. Each partition includes similar tweets stand for a specific event. As shown in Figure~\ref{Mexico-events}, there are three distinct extreme weather event type in Mexico in different locations, the word cloud shows discussion on Twitter as per that event.
+
 
 %\begin{figure}[ht]
 %\centerline
@@ -371,6 +371,29 @@ We are also interested in climate events influence on social media, such as Twit
 %\caption{Classification methods comparison.}
 %\label{resultsComp}
 %\end{figure}
+
+
+\section*{Discussion}
+\matmethods{
+%Please describe your materials and methods here. This can be more than one paragraph, and may contain subsections and equations as required. Authors should include a statement in the methods section describing how readers will be able to access the data in the paper.
+\paragraph{Dataset: GSR}
+Using human analysts, MITRE organizes a gold standard report (GSR) of protests by surveying newspapers for reportings of civil unrest. The GSR includes many features, as shown in Figure~\ref{GSR}, such as protest location, event date, protest type, status, crowd size, headline, date, population, protest description, first reported links, etc.. The description feature is brief description of the protest, generally, it tells us who, where, why and when protest. As Figure~\ref{GSR} shows, the protest description is `small farmers want the bank to forgive their debts due to the drought, which has hampered production'.
+
+\begin{figure}[th]
+\centerline
+{\includegraphics[width = 2.5in]{figures/gsr_event_json.png}}
+\caption{Gold standard report (GSR) format.}
+\label{GSR}
+\end{figure}
+
+\paragraph{Climate protest classifier}
+a. Method. From GSR events, we devised a climate protest classifier to identify the climate related protest events automatically. The classifier is built based on logistic regression model. With input of GSR descriptions, we aim to train a classifier which can label a protest description as climate related or not. The GSR includes many potential important features, such as status, description, crowd size, headline, event Type, event Date, location, date, population etc. The description feature is brief description of the events, which plays a dominant role in the entire dataset. In order to adopt logistic regression on GSR dataset, we need to vectorize text data in the dataset. First of all, we construct a word corpus which includes every word $x_i$ shown in the training dataset (including non-words). We accept non-words because most coinages come from Internet and some of them might be important for the events. As we accept non-words, the corpus might be large than our corpus vocabulary. The word corpus is composed with $[x_1, x_2, ..., x_i, ..., x_N]$.
+Second, take each GSR description as a vector, we assign values to each vector, if $x_i$ appeared in GSR record, the corresponding value will be assigned as 1, otherwise 0. In this way, every GSR record being converted to a corresponding vector based on the corpus. Third, set climate protest as $Y=1$, non-climate protest as $Y=0$, the weight for each term $x_i$ as $k_i$, then $Y_j = \sum_{i=1}^{N} k_i x_i $. By training process, we calculate the weight $k_i$ for each term $x_i$. The last step is test. Given a new GSR description, the probability of classification is:
+$$P(Y = 0| X)= \frac{1}{1+exp( {\sum_{i=1}^{N} k_ix_i})}$$
+$$P(Y = 1| X)= \frac{exp( {\sum_{i=1}^{N} k_ix_i})}{1+exp( {\sum_{i=1}^{N} k_ix_i})}$$
+
+
+b. Evaluation. We manually labelled 1700 GSR protest records as climate or non-climate protests. Using 70\% dataset as training, and the rest 30\% as test. To ensure we have a trustworthy classification results, we evaluate the performance carefully by cross evaluation. The evaluation criteria are precision (positive predictive value), recall (true positive rate), F-measure (a measure that combines precision and recall) and accuracy (the proportion of true results both true positives and true negatives among the total number of cases examined). We compare with four well-known classification methods: majority assign, K-nearest neighbor, Naive Bayes, and weighted support vector machine (SVM). Since the climate events account for a small portion of all the events, which make it an unbalanced classification problem, so we change the traditional support vector machine into weighted SVM, by adding more importance to the climate portest events (we set the class weight to be 100). From Table~\ref{table:comparision}, we prove logistic regression method outperforms other methods uniformly.
 
 \begin{table}[!ht]
 \small
@@ -396,33 +419,9 @@ Logisitic Regression & 0.7513 &  0.5102 &  \textbf{0.6018}&  \textbf{0.9322}  \\
 \end{table}
 
 
-\section*{Discussion}
+\paragraph{Conclusion} We build a climate protest classifier based on the logistic linear regression model, which achieves the best performance comparing with other classical classifiers. We analysis the climate related protest both temporally and geographically. Further more, we investigate the climate protest causalities, and show that the shortage of water and electricity tops the climate protests. Finally, we also demonstrate the climate protests patterns and its influence on twitter.
 
-
-\begin{figure}[ht]
-\centerline
-{\includegraphics[width = 3.5in]{figures/gsr_event_json.png}}
-\caption{Classification methods comparison.}
-\label{resultsComp}
-\end{figure}
-
-
-%\matmethods{
-%Please describe your materials and methods here. This can be more than one paragraph, and may contain subsections and equations as required. Authors should include a statement in the methods section describing how readers will be able to access the data in the paper.
-
-Using human analysts, MITRE organizes a gold standard report (GSR) of protests by surveying newspapers for reportings of civil unrest. From GSR events, we devised a climate protest classifier to identify the climate related protest events automatically.
-
-The classifier is built based on logistic regression model. With input of GSR descriptions, we aim to train a classifier which can label a protest description as climate related or not. The GSR includes many potential important features, such as status, description, crowd size, headline, event Type, event Date, location, date, population etc. The description feature is brief description of the events, which plays a dominant role in the entire dataset. In order to adopt logistic regression on GSR dataset, we need to vectorize text data in the dataset. First of all, we construct a word corpus which includes every word $x_i$ shown in the training dataset (including non-words). We accept non-words because most coinages come from Internet and some of them might be important for the events. As we accept non-words, the corpus might be large than our corpus vocabulary. The word corpus is composed with $[x_1, x_2, ..., x_i, ..., x_N]$.
-Second, take each GSR description as a vector, we assign values to each vector, if $x_i$ appeared in GSR record, the corresponding value will be assigned as 1, otherwise 0. In this way, every GSR record being converted to a corresponding vector based on the corpus. Third, set climate protest as $Y=1$, non-climate protest as $Y=0$, the weight for each term $x_i$ as $k_i$, then $Y_j = \sum_{i=1}^{N} k_i x_i $. By training process, we calculate the weight $k_i$ for each term $x_i$. The last step is test. Given a new GSR description, the probability of classification is:
-$$P(Y = 0| X)= \frac{1}{1+exp( {\sum_{i=1}^{N} k_ix_i})}$$
-$$P(Y = 1| X)= \frac{exp( {\sum_{i=1}^{N} k_ix_i})}{1+exp( {\sum_{i=1}^{N} k_ix_i})}$$
-
-
-We manually labelled 1700 GSR protest records as climate or non-climate protests. Using 70\% dataset as training, and the rest 30\% as test. To ensure we have a trustworthy classification results, we evaluate the performance carefully by cross evaluation. The evaluation criteria are precision (positive predictive value), recall (true positive rate), F-measure (a measure that combines precision and recall) and accuracy (the proportion of true results both true positives and true negatives among the total number of cases examined). We compare with four well-known classification methods: majority assign, K-nearest neighbor, Naive Bayes, and weighted support vector machine (SVM). Since the climate events account for a small portion of all the events, which make it an unbalanced classification problem, so we change the traditional support vector machine into weighted SVM, by adding more importance to the climate portest events (we set the class weight to be 100). From Table~\ref{table:comparision}, we prove our logistic regression method outperforms other methods uniformly.
-
-\paragraph{Conclusion} We build a climate protest classifier based on the logistic linear regression model, which achieves the best performance comparing with other classical classifiers. We analysis the climate related protest both temporally and geographically. Further more, we investigate the climate protest causalities, and show that the shortage of water and electricity tops the climate protests. Finally, we also demonstrate the climate protests patterns.
-
-%}
+}
 
 \showmatmethods % Display the Materials and Methods section
 
