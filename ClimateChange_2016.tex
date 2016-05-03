@@ -26,7 +26,7 @@
 \leadauthor{Jin}
 
 
-\significancestatement{From 1995-2015, 90\% of global disasters are caused by extreme weather events such as flood, storm, heat wave and so on. What is more, the extreme weather events are increasing continuously, resulting natural disasters happen more and more frequent. Records from the international disaster database EM-DAT shows, the average disasters per year from 2005 to 2014 is 14\% higher than the years between 1995 and 2004, and is twice of years between 1985 and 1994. However, how the extreme weather events lead to armed conflicts is still under disclosed. This work presents a promising strategy to identify climate change related protests in South America, and further trace back protest causalities, and discover the mainly evolution patterns from climate change to civil unrest. This work can be extended into United States and other countries, to help decision makers understand the evolution path from extreme weather events to civil unrest, and benefit for society stabilization and human well-beings.}
+\significancestatement{From 1995-2015, 90\% of global disasters are caused by extreme weather events such as flood, storm, heat wave and so on. What is more, the extreme weather events are increasing continuously, resulting natural disasters happen more and more frequent. Records from the international disaster database EM-DAT shows, the average disasters per year from 2005 to 2014 is 14\% higher than the years between 1995 and 2004, and is twice of years between 1985 and 1994. However, how the extreme weather events lead to armed conflicts is still under disclosed. This work presents a promising strategy to identify climate change related protests in Latin America, and further trace back protest causalities, and discover the mainly evolution patterns from climate change to civil unrest. This work can be extended into United States and other countries, to help decision makers understand the evolution path from extreme weather events to civil unrest, and benefit for society stabilization and human well-beings.}
 
 
 % Please include corresponding author, author contribution and author declaration information
@@ -55,8 +55,8 @@
 \thispagestyle{firststyle}
 \ifthenelse{\boolean{shortarticle}}{\ifthenelse{\boolean{singlecolumn}}{\abscontentformatted}{\abscontent}}{}
 \section{Introduction}
-\dropcap{C}limate change, extreme weather, and the state of the environment directly impact the availability of food \cite{RW3}, energy \cite{}, and shelter \cite{}.
-As finite resources become scarce, the residual impacts on local economies can have disastrous and long-lasting effects on the fundamental livelihoods of inhabitants for decades \cite{}.
+\dropcap{C}limate change, extreme weather, and the state of the environment directly impact the availability of food~\cite{RW3}, energy~\cite{}, and shelter~\cite{}.
+As finite resources become scarce, the residual impacts on local economies can have disastrous and long-lasting effects on the fundamental livelihoods of inhabitants for decades~\cite{}.
 In some cases, the resulting instability can severely detriment the ability of an established political system to maintain peace.
 The examples of this occurring are numerous.
 The extended drought in Syria in 2011 is cited as one of the principle causes of civil war \cite{gleick2014water,kelley2015climate}.
@@ -66,7 +66,7 @@ The extreme weather event, Hurricane Manuel, that devastated the western coasts 
 Of course, the occurrence of either a shift in climate, extreme weather, or environmental catastrophe is not sufficient to guarantee that civil unrest is likely to follow.
 In general the causal mechanisms leading to civil unrest are very complex, and there is no easy way to determine a linear pathway to protest.
 However, to date, little quantitative analysis has been performed on the residual effects of changes resulting from climate, extreme weather, and the environment using a large volume of data.
-In this analysis, we focus on the breadth of the climate events by looking at events generated from a large Gold Standard Report (GSR) containing all of the protests that have occurred in Latin America from 2011-2013.
+In this analysis, we focus on the breadth of the climate events by looking at events generated from a large Gold Standard Report (GSR) containing all of the protests that have occurred in Latin America from 2011-2015.
 By developing a logistic regression classifier, 25352 GSR civil unrest events were classified as either being climate or non-climate related using terms in the description of the event.
 
 
@@ -77,10 +77,10 @@ By developing a logistic regression classifier, 25352 GSR civil unrest events we
 
 Generally, the main contribution of this paper can be summarized as:
 \begin{itemize}
-  \item First, we develop a logistic regression classifier, which can classify climate protests from non-climate protests automatically based on protest events description.
-  \item Second, we analyze the climate protest spikes and disclose its relationship with climate disasters. For example, we plot the climate protests time series in Mexico and Brazil, and overlay with corresponding climate disasters, found for storm and hurricane events in Mexico, the protest time line last much longer. However, for drought events in Brazil, the protests being initiated more swift, also last shorter time.
-  \item Thirdly, we figure out the proportion of protest causality. By studying some major climate disasters, we also discover each protest category's demands.
-  \item Finally, We investigate the climate co-occurrence. For instance, the water related protests are often accompanies with electricity shortage, while land ownership protests are often isolated reasons.
+  \item First, we develop a logistic regression classifier, which can classify climate protests from non-climate protests automatically based on protest event descriptions.
+  \item Second, we analyze the climate protest spikes and disclose its relationship with climate disasters. For instance, the time span caused by storm and hurricane events in Mexico last much longer. However, for drought events in Brazil, the protests being initiated more swiftly, also last much shorter.
+  \item Thirdly, we figure out the proportion of protest causality. By studying some major climate disasters, we also discover each protest category's evolution pattern, thus how does the climate disasters lead to armed climate protests. 
+  \item Finally, we investigate the climate co-occurrence. For instance, the water related protests are often accompanies with electricity shortage, while land ownership protests are often associate with farmers.
 \end{itemize}
 %
 
@@ -114,22 +114,6 @@ However, even this path of climate effects on income level leading to conflict i
 
 
 \begin{figure}[ht]
-\centerline
-{\includegraphics[width=.5\textwidth]{figures/protest_time_series.png}}
-\caption{climate protest and non-climate protest time series offrom July 2012 to March 2015.}
-\label{month_percentage}
-\end{figure}
-
-
-\begin{figure}[ht]
-\centerline
-{\includegraphics[width=.4\textwidth]{figures/protest-population}}
-\caption{Climate protest events and population (million) of each country. The two series have a Pearson correlation coefficient 0.64.}
-\label{protest-population}
-\end{figure}
-
-
-\begin{figure}[ht]
 	\centering
 	\subfigure[]{
 		\includegraphics[height=1.5in] {figures/map-climate-number}
@@ -144,13 +128,31 @@ However, even this path of climate effects on income level leading to conflict i
 \end{figure}
 
 
-We study 25352 GSR civil unrest events across Latin American countries from July 2011 to March 2015. We build a climate change protest classifier, aim to identify how many civil unrest events are caused by climate change or extreme weathers. Among all the 25352 GSR protest events,  991 events are classified into climate-related events. In other wordswords, in Latin American countries, the climate related protests accounts for 3.91\%. As shown in Figure~\ref{month_percentage}, Blue bar shows all the GSR protest events, from the highest amount of Mexico 7354 to lowest country Cost Rica 27; yellow bar shows climate related protest events; the blue area describes the climate related protests percentage over all the GSR protest events. Figure~\ref{map_number} plots the climate related protests events numbers, we can see Mexico has the most climate protests events, as high as 348. And Figure~\ref{map_percentage} gives us a straight view of climate protest percentage, of which, Peru climate protest accounts as high as 25.9\%, Bolivia climate protest percentage reaches as high as 15.3\%, Panama 11.4\% and Guatemala 11.1\% respectively.
+\begin{figure}[ht]
+\centerline
+{\includegraphics[width=.5\textwidth]{figures/protest_time_series.png}}
+\caption{climate protest and non-climate protest time series from 2011 to March 2015.}
+\label{protest_time_series}
+\end{figure}
+
+
+\begin{figure}[ht]
+\centerline
+{\includegraphics[width=.4\textwidth]{figures/protest-population}}
+\caption{Climate protest events and population (million) of each country. The two series have a Pearson correlation coefficient 0.64.}
+\label{protest-population}
+\end{figure}
+
+
+We study 25352 GSR civil unrest events across Latin American countries from July 2011 to March 2015. We build a climate change protest classifier, aim to identify how many civil unrest events are caused by climate change or extreme weathers. Among all the 25352 GSR protest events,  991 events are classified into climate-related events. In other wordswords, in Latin American countries, the climate related protests accounts for 3.91\%. As shown in Figure~\ref{month_percentage}, Blue bar shows all the GSR protest events, from the highest amount of Mexico 7354 to lowest country Cost Rica 27; yellow bar shows climate related protest events; the blue area describes the climate related protests percentage over all the GSR protest events. Figure~\ref{map_number} plots the climate related protests events numbers, we can see Mexico has the most climate protests events, as high as 348. And Figure~\ref{map_percentage} gives us a straight view of climate protest percentage, of which, Peru climate protest accounts for as high as 25.9\%, Bolivia climate protest percentage reaches as high as 15.3\%, Panama 11.4\% and Guatemala 11.1\% respectively. However, those countries including Panama, Honduras, Nicaragua, Guyana and Cost Rica, have both low none-climate and climate protests. This is probably because these countries have smaller population, suffer less natural disasters, and better governance.
+
 
 Countries like Mexico, Brazil, and Venezuela have both high none-climate and climate protests, and their climate percentile rates are roughly stable around 4 \%.
-We pull out these three countries' climate and non-climate events location, and show their distribution on the map, as shown in Figure~\ref{climate-map}. Interestingly, climate protests in Brazil mainly center at two major cities, Sao Paulo, and Rio de Janerio. While for Mexico and Venezuela, the climate protest city happens in most cities uniformly. Probably, it is because that the climate protest distribution is closely correlated with population density, the higher population density area, the more protest events, regardless of climate or non-climate. We can also see from Figure~\ref{month_percentage}, countries like Panama, Honduras, Nicaragua, Guyana and Cost Rica, have both low none-climate and climate protests. This is probably because these countries have smaller population, suffer less natural disasters, and better governance.
+We pull out these three countries' climate and non-climate events location, and show their distribution on the map, as shown in Figure~\ref{climate-map}. Interestingly, climate protests in Brazil mainly center at two major cities, Sao Paulo, and Rio de Janerio. While for Mexico and Venezuela, the climate protest city happens in most cities uniformly. Probably, it is because that the climate protest distribution is closely correlated with population, the higher population area, the more protest events, as shown in Figure~\ref{protest-population}. 
 
 
-We investigate the protest event time series in South American. As shown in Figure 3, on average, February, March, and May see the most climate-related protest events, while November has the less. We can also see the for the none-climate protest, the temporal distribution is different since it see most protest in July. This is because there are more climate disasters than other months. This is consist with the statistic data concerning the natural disasters in South American.
+We investigate the protest event time series in South American. As shown in Figure~\ref{protest_time_series}, on average, February, June, July, and August see the most climate-related protest events. We can also see the for the none-climate protest, the temporal distribution is different since it see most protests in March. 
+%This is consist with the statistic data concerning the natural disasters in South American.
 
 \begin{figure*}[ht]
 	\centering
@@ -356,9 +358,9 @@ For Venezuela's climate protests, as can be seen in Figure~\ref{Venezuela_cluste
 
 
 \paragraph{7. Climate protests in Twitter}
-We are also interested in climate events influence on social media, such as Twitter. Using keywords list we are able to filter tweets, then cluster tweets into different partitions based on similarity among tweets using distance function, taking tweets content, geolocation and other features into consideration. 
+We are also interested in climate events influence on social media, such as Twitter. Using keywords list we are able to filter tweets, then cluster tweets into different partitions based on similarity among tweets using distance function, taking tweets content, geolocation and other features into consideration.
 
-Events Clustering is used to separate events happened at same place or at same time, or the separate different events happened simultaneously on local and entire country. By measure the distance among tweets based on similarity, tweets collection can be clustered into subsets in which tweets are exactly related and similar. Each partition includes similar tweets stand for a specific event. Without events clustering, different events will be mixed. As shown in Figure~\ref{Mexico-events}, Mexico Hurricane were mixed with severe drought happen in Culiacan, with the aid of event clustering, we are able to distinguish those distinct extreme weather events, even though they may happen at the same time. For each event, we plot the related Tweets word cloud besides the flag. Figure~\ref{Brazil-events} illustrates four drought events in Brazil, on May 2012. 
+Events Clustering is used to separate events happened at same place or at same time, or the separate different events happened simultaneously on local and entire country. By measure the distance among tweets based on similarity, tweets collection can be clustered into subsets in which tweets are exactly related and similar. Each partition includes similar tweets stand for a specific event. Without events clustering, different events will be mixed. As shown in Figure~\ref{Mexico-events}, Mexico Hurricane were mixed with severe drought happen in Culiacan, with the aid of event clustering, we are able to distinguish those distinct extreme weather events, even though they may happen at the same time. For each event, we plot the related Tweets word cloud besides the flag. Figure~\ref{Brazil-events} illustrates four drought events in Brazil, on May 2012.
 
 \begin{figure}[t]
 	\centering
@@ -428,7 +430,7 @@ Logisitic Regression & 0.7513 &  0.5102 &  \textbf{0.6018}&  \textbf{0.9322}  \\
 \end{table}
 
 
-\paragraph{Conclusion} This paper firstly build a climate protest classifier, which achieves the best performance comparing with other classical classifiers. The rest analysis is based upon the classification results. This paper gives an overview of Latin American countries climate protests distributions, both temporally and geographically. More importantly, this paper use the third party climate diaster records, overlay with climate protests. On the one hand, by showing the climate diasters and its subsequent climate protests, we prove the classification result is reasonable. On the other hand, it discloses the protests time span for major climate diasters. Another distinguishing contribution is, by constructing knowledge graph, this paper disclose the protest causalities, and discovery the climate protests evolution pattern, from climate events to climate protests. Another contribution is, by clustering description content, this paper shows the climate protest patterns in Latin American countries, such as in Venezuela, the majority protests are against lacking of water, which has high co-occurrence with protests against power outage. Finally, we analyze climate protests influence in Twitter, by building event clusters, we are able to separate events happened at same place or at same time. 
+\paragraph{Conclusion} This paper firstly build a climate protest classifier, which achieves the best performance comparing with other classical classifiers. The rest analysis is based upon the classification results. This paper gives an overview of Latin American countries climate protests distributions, both temporally and geographically. More importantly, this paper use the third party climate diaster records, overlay with climate protests. On the one hand, by showing the climate diasters and its subsequent climate protests, we prove the classification result is reasonable. On the other hand, it discloses the protests time span for major climate diasters. Another distinguishing contribution is, by constructing knowledge graph, this paper disclose the protest causalities, and discovery the climate protests evolution pattern, from climate events to climate protests. Another contribution is, by clustering description content, this paper shows the climate protest patterns in Latin American countries, such as in Venezuela, the majority protests are against lacking of water, which has high co-occurrence with protests against power outage. Finally, we analyze climate protests influence in Twitter, by building event clusters, we are able to separate events happened at same place or at same time.
 
 }
 
