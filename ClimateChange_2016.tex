@@ -63,19 +63,26 @@ The extended drought in Syria in 2011 is cited as one of the principle causes of
 In a smaller scale example, the environmental impact of lead contamination in the drinking water in the United States led to protests in 2016.
 The extreme weather event, Hurricane Manuel, that devastated the western coasts of Mexico led to subsequent protests over resources at points as long as 1 year after the initial event.
 
+
+The path from climate, extreme weather and environmental effects to civil unrest is causally complex \cite{hsiang2011civil,RW5} and involves various combinations of climate change \cite{burke2014climate}, natural resources, human security, and social stability.
+In general, sensitivities to climate change, exposure to climate change, and the ability of a society to adapt are indicators of whether or not violence will erupt~\cite{RW9}.
+A commonly studied pathway is the effect of climate on food prices which then induces civil unrest.
+An examples of this occurrence is the Arab Spring uprisings in 2011, and how weather effects food prices~\cite{RW2}.
+The pathway to civil unrest is also not limited to a local region, where one study shows the Chinese drought effecting the supply wheat causing prices to rise in the Egyptian break market leading to protest~\cite{RW1}.
+The pathways of food prices to protest have also been studied in the global south~\cite{RW4}, Africa, and Asia~\cite{wischnath2014climate,RW6}.
+However, even this path of climate effects on income level leading to conflict is not eminently clear~\cite{RW10}.
+
+
 Of course, the occurrence of either a shift in climate, extreme weather, or environmental catastrophe is not sufficient to guarantee that civil unrest is likely to follow.
 In general the causal mechanisms leading to civil unrest are very complex, and there is no easy way to determine a linear pathway to protest.
-However, to date, little quantitative analysis has been performed on the residual effects of changes resulting from climate, extreme weather, and the environment using a large volume of data.
-In this analysis, we focus on the breadth of the climate events by looking at events generated from a large Gold Standard Report (GSR) containing all of the protests that have occurred in Latin America from 2011-2015.
-By developing a logistic regression classifier, 25352 GSR civil unrest events were classified as either being climate or non-climate related using terms in the description of the event.
+However, to date, little quantitative analysis has been performed on the residual effects of changes resulting from climate, extreme weather, and the environment using a large volume of data. In this analysis, we focus on the breadth of the climate events by looking at events generated from a large Gold Standard Report (GSR) containing all of the protests that have occurred in Latin America from 2011-2015.
 
+We address three foundational problems: first, the identification of climate related protest. By developing a logistic regression classifier, 25352 GSR civil unrest events were classified as either being climate or non-climate related using terms in the description of the event. Second, from analyzing large historical climate protests records, we look into the text description of protests and extract the climate protest category for each country. For each major climate category, we adopt the knowledge graph approach to define linkage relationship between entities, and study the possible protest causalities. Third, we find that the massive climate protests have coherent correlations within them, we also show that certain protest types are more prone to associate with certain other protest types, such as lack of water is highly linked with power shortage, and so on. Generally, the main contribution of this paper can be summarized as:
 
 %NEXT... WHAT DID WE FIND???
 %{\color{red}
 %NOTE: THERE ARE A LOT OF FIGURES - these are observations - BUT WE NEED TO DRAW CONCLUSIONS. WHAT DO YOU LEARN FROM THESE FIGURES? HOW CAN YOU MAKE QUANTIFIABLE COMPARISONS? WHAT INTERESTING THINGS DO YOU FIND IN THE DATA. CURRENTLY, THERE IS SPATIAL, (TEMPORAL?), and ``CAUSALITY''. PLEASE TRY TO THINK ABOUT WAYS TO CHARACTERIZE THE DIFFERENCES/SIMILARITIES BETWEEN CLIMATE/NON-CLIMATE PROTESTS. ALSO, HOW WOULD YOU COMPARE ACROSS THE 3 COUNTRIES YOU'VE ANALYSED?}
 
-
-Generally, the main contribution of this paper can be summarized as:
 \begin{itemize}
   \item First, we develop a logistic regression classifier, which can classify climate protests from non-climate protests automatically based on protest event descriptions.
   \item Second, we analyze the climate protest spikes and disclose its relationship with climate disasters. For instance, the time span caused by storm and hurricane events in Mexico last much longer. However, for drought events in Brazil, the protests being initiated more swiftly, also last much shorter.
@@ -84,14 +91,8 @@ Generally, the main contribution of this paper can be summarized as:
 \end{itemize}
 %
 %
-\section{Related research}
-The path from climate, extreme weather and environmental effects to civil unrest is causally complex \cite{hsiang2011civil,RW5} and involves various combinations of climate change \cite{burke2014climate}, natural resources, human security, and social stability.
-In general, sensitivities to climate change, exposure to climate change, and the ability of a society to adapt are indicators of whether or not violence will erupt~\cite{RW9}.
-A commonly studied pathway is the effect of climate on food prices which then induces civil unrest.
-An examples of this occurrence is the Arab Spring uprisings in 2011, and how weather effects food prices~\cite{RW2}.
-The pathway to civil unrest is also not limited to a local region, where one study shows the Chinese drought effecting the supply wheat causing prices to rise in the Egyptian break market leading to protest~\cite{RW1}.
-The pathways of food prices to protest have also been studied in the global south~\cite{RW4}, Africa, and Asia~\cite{wischnath2014climate,RW6}.
-However, even this path of climate effects on income level leading to conflict is not eminently clear~\cite{RW10}.
+%\section{Related research}
+
 
 %{\color{red} This second paragraph will discuss work more related to the specific conclusions that we draw... we don't have these yet. Or do we? Anyway cite Hsiang here...}
 %
@@ -210,8 +211,6 @@ Through complex channels such as food supply, the effects of climate impact can 
 %\label{population-density}
 %\end{figure}
 
-
-
 %\subsection{3.3 Protest time interval deviation}
 %Figure~\ref{Mexico-deviation} shows Mexico climate and non-climate protests time interval distribution. We found the non-climate protests have very high percentage with small time interval, less than three days. The climate protests, on the contrary, time interval is longer than non-climate protests.
 %
@@ -221,7 +220,6 @@ Through complex channels such as food supply, the effects of climate impact can 
 %\caption{Mexico climate and non-climate protests time interval deviation. Blue curve shows the non-climate protest time intervals percentage, and red curve shows climate protest time interval percentage.}
 %\label{Mexico-deviation}
 %\end{figure}
-
 
 \begin{figure*}[ht]
 	\centering
@@ -397,12 +395,7 @@ Figure~\ref{Mexico_causality} shows the storm caused protests demands in Mexico,
 The above analysis shows the general protest causality, however, we intend to further discover the coherent correlations of protest reasons, hoping to answer questions like is there any protest pattern, or are there some protests associate with others. We treat each protest event as a node and connect two nodes with weight based on their protest description text similarity. Specially, we pay attention to the protest themes or protest demands, if two descriptions have the same protest demanding, their weight will be very high, otherwise, their connection weight tends to be 0. In this way, we build a weighted undirected network and  employ Louvain method~\cite{blondel2008fast} to split the network into several clusters.
 %$G(V, E, W)$, with each protest as node $V$, and their connection as edge $E$, their weight as $W$. If the weight between two nodes is 0, there will be no edge. We
 
-For Brazil's climate protests, as can be seen in Figure~\ref{Brazil_cluster}, the purple cluster which represents land ownership accounts for the most part, 26.7\%, the green cluster which denotes lack of water takes up 20.7\%, farmers cluster occupies 13.8\%. The interesting thing is land and farmers clusters are closely coherent. Amazon rainforest is another striking protest which is responsible for 11.3\%.
-
-For Mexico's climate protests, as shown in Figure~\ref{Mexico_cluster}, the rose red cluster which denotes lack of water is the most dominant protest, accounts for 20.5\%, the green cluster tropical storm is the second largest protest type, takes up 19.0\%, the dark blue cluster construction accounts for 17\%, and the yellow cluster land is responsible for 11.8\%. The interesting thing is, water protest is intertwined with environment protest and power protest, land protest is closely related with farmers, while construction cluster is coherent with baby blue cluster (2.6\%) which denotes homes.
-
-
-For Venezuela's climate protests, as can be seen in Figure~\ref{Venezuela_cluster}, the yellow cluster which represents lack of water protests takes up as high as 55.8\%, the green cluster which denotes power outage accounts for 22.1\%, and the blue cluster which stands for gas shortage accounts for 5\%, the purple cluster shows the rest climate protest portion, which include food shortage, medicine shortage, water tank robbery behavior, etc..
+We show in Figure~\ref{clusters} the climate protest clustering results that provides the protest proportion and coherent correlations among different protest types. Figure~\ref{Brazil_cluster} illustrates Brazil's climate protest pattern, the results shows that in Brazil, the largest protest cluster is about land ownership which accounts for 26.7\%, the second cluster lack of water takes up 20.7\%, farmers cluster occupies 13.8\%, of which, one interesting discover is land and farmers clusters are closely coherent, and lack of water is also closely bind with farmers. Amazon rainforest is another striking protest which is responsible for 11.3\%. Figure~\ref{Mexico_cluster} shows the protest pattern of Mexico, which has the most climate protest events and complex patterns. We can see the rose red cluster which denotes lack of water is the most dominant protest, accounts for 20.5\%, the green cluster represents tropical storm is the second largest protest type, takes up 19.0\%, the dark blue cluster construction accounts for 17\%, and the yellow cluster land is responsible for 11.8\%. We find, water protest is intertwined with environment protest and power protest, land protest is closely related with farmers, while construction cluster is coherent with baby blue cluster which denotes homes (2.6\%). Figure~\ref{Venezuela_cluster} gives the overview clustering results of Venezuela climate protests. We can see, the yellow cluster which represents lack of water protests takes up the largest portion, as high as 55.8\%, the green cluster which denotes power outage accounts for second part, 22.1\%, and the blue cluster which stands for gas shortage accounts for 5\%, the purple cluster shows the rest climate protest portion, which include food shortage, medicine shortage, water tank robbery behavior, etc.. Clearly, as expected, lack of water protest is intertwined with power outage protest, which corresponds to the fact that lack of water and power shortage is everyday life in Venezuela.
 
 
 %\paragraph{7. Climate protests in Twitter}
