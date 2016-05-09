@@ -26,12 +26,13 @@
 \leadauthor{Jin}
 
 
-\significancestatement{From 1995-2015, 90\% of global disasters are caused by extreme weather events such as flood, storm, heat wave and so on. What is more, the extreme weather events are increasing continuously, resulting natural disasters happen more and more frequent. Records from the international disaster database EM-DAT shows, the average disasters per year from 2005 to 2014 is 14\% higher than the years between 1995 and 2004, and is twice of years between 1985 and 1994. However, how the extreme weather events lead to armed conflicts is still under disclosed. This work presents a promising strategy to identify climate change related protests in Latin America, and further trace back protest causalities, and discover the mainly evolution patterns from climate change to civil unrest. This work can be extended into United States and other countries, to help decision makers understand the evolution path from extreme weather events to civil unrest, and benefit for society stabilization and human well-beings.}
+\significancestatement{Although much evidence has accrued on the strong causal associations between climate change and human wellbeing and security, important gaps remain in our understanding of the interaction between climate change and civil unrest. Improving the understanding of these dynamics as well as developing the mechanism to identify the climate related civil unrest events, is critical for developing interventions and adaptations to mitigate these risks. This study integrates a collection of disciplinary perspectives to identify climate change related protests in Latin America, and further trace back protest causalities, and discover the main evolution patterns from climate change to civil unrest. This work can be extended into United States and other countries, to help decision makers understand the evolution path from extreme weather events to civil unrest, and benefit for society stabilization and human well-beings.
+}
 
 
 % Please include corresponding author, author contribution and author declaration information
 \authorcontributions{Please provide details of author contributions here.}
-\authordeclaration{Please declare any conflict of interest here.}
+\authordeclaration{The authors declare no conflict of interest.}
 \correspondingauthor{\textsuperscript{1}To whom correspondence should be addressed. E-mail: jfang8@vt.edu}
 
 % Keywords are not mandatory, but authors are strongly encouraged to provide them. If provided, please include two to five keywords, separated by the pipe symbol, e.g:
@@ -331,6 +332,7 @@ They occur rather frequently and there is a substantial amount of overlap in the
 \label{causality}
 \end{figure}
 
+
 As stated previously, we are not blind to the realization that the causes of climate motivated protests are in general complex.
 In the following, we analyze the descriptions of the protest events in order to gain insight into the general pathways by which protests within our corpus have occurred.
 Shown in Figure~\ref{causality} is a weighted Sankey diagram showing the bipartite graph of the most common keywords in the descriptions of protests from each country.
@@ -342,7 +344,6 @@ In Venezuela, apart from lack of water and environment problems, the dominant ke
 In Peru, more than half of climate protests are about a mining project, which is an environment concern.
 While in Argentina, 35\% events protest against blackout issues.
 We expand on these observations in the following where we analyze several dimensions of the keywords to extract details about pathways to protest.
-
 
 \begin{figure}[htb]
 	\centering
@@ -363,6 +364,10 @@ We expand on these observations in the following where we analyze several dimens
 \end{figure}
 
 
+\subsection*{Pathways to Climate Motivated Protest}
+For some severe and dominant climate events, such as storm, hurricane, flood, and drought events, we employ the knowledge graph to represent the link relationships between entities. By matching the object or subject with climate related keywords, and predicate to be causality relationship like result of, cause by, lead to, blamed, accused of, demanding, against, request, we can locate and further identify the causality of most protest descriptors.
+
+Figure~\ref{Mexico_causality} shows the storm caused protests demands in Mexico, which generally falls into four categories: supply, home, government and reconstruction. In the supply related protest, the causality includes but not limited to: lack of drinking water, lack of good support, and power outage. The second category is about home, they protest either because of lost homes, or request to relocate to avoid storm, or request to reconstruct homes. Another protest type targets at government, they either fight because government did not take action, or blame government's indifference to damages, or request finance compensation to the damages. In the reconstruction category, residents demand reconstruct channels to avoid more storms, request to reconstruct bridges, roads, schools, or unsatisfied with the slow pace of rebuilding homes. Figure~\ref{Brazil_causality} describes the causality of Brazil climate related protests. One line is heat wave hampered production, which cause farmers' protests, the other line is drought causing residents lack of drinking water thus lead to protest, and the third line is lack of water causing farmers facing the risk of losing land, which result in protest. In Venezuela, the protests are more water-electricity centralized, as shown in Figure~\ref{Venezuela_cluster}. Scarce rainfall, drought plus failing infrastructure, which makes water shortage and blackout is an everyday fact of life in Venezuela. The electricity shortage deteriorates water shortage, leads to food shortage, and worsens food quality, and so forth. All those situation touches off climate related protests.
 
 
 \begin{figure*}[ht]
@@ -382,12 +387,6 @@ We expand on these observations in the following where we analyze several dimens
 	\caption{Climate protest clustering results}
 \label{clusters}
 \end{figure*}
-
-
-\subsection*{Pathways to Climate Motivated Protest}
-For some severe and dominant climate events, such as storm, hurricane, flood, and drought events, we employ the knowledge graph to represent the link relationships between entities. By matching the object or subject with climate related keywords, and predicate to be causality relationship like result of, cause by, lead to, blamed, accused of, demanding, against, request, we can locate and further identify the causality of most protest descriptors.
-
-Figure~\ref{Mexico_causality} shows the storm caused protests demands in Mexico, which generally falls into four categories: supply, home, government and reconstruction. In the supply related protest, the causality includes but not limited to: lack of drinking water, lack of good support, and power outage. The second category is about home, they protest either because of lost homes, or request to relocate to avoid storm, or request to reconstruct homes. Another protest type targets at government, they either fight because government did not take action, or blame government's indifference to damages, or request finance compensation to the damages. In the reconstruction category, residents demand reconstruct channels to avoid more storms, request to reconstruct bridges, roads, schools, or unsatisfied with the slow pace of rebuilding homes. Figure~\ref{Brazil_causality} describes the causality of Brazil climate related protests. One line is heat wave hampered production, which cause farmers' protests, the other line is drought causing residents lack of drinking water thus lead to protest, and the third line is lack of water causing farmers facing the risk of losing land, which result in protest. In Venezuela, the protests are more water-electricity centralized, as shown in Figure~\ref{Venezuela_cluster}. Scarce rainfall, drought plus failing infrastructure, which makes water shortage and blackout is an everyday fact of life in Venezuela. The electricity shortage deteriorates water shortage, leads to food shortage, and worsens food quality, and so forth. All those situation touches off climate related protests.
 
 
 \paragraph{Climate protest patterns}
@@ -468,7 +467,7 @@ GSR is a gold standard report of protests organized by MITRE, using human analys
 %%match (a)-[relations]-(b) where a.name =~ '.*climate.*', and a.relations =~ '.*cuase.*'  return a, relations, b. We are interested in relations like 'cause', 'demanding', 'against', 'request', and so on.
 
 \paragraph{Climate protest classifier}
-\textbf{a. Logistic regression classifier.} 
+\textbf{a. Logistic regression classifier.}
 The classifier is built based on logistic regression method.
 To reduce the computation complexity, we only apply the GSR description text as input to the logistic regression classifier. First of all, we construct a bag of words from the training data-set descriptions by deleting meaningless stop-words, like "the", "a/an", "at", and etc.. The bag of words is composed of $M$ words denoted as $[w_1, w_2, ..., w_M]$.
 Each GSR description $X$ is considered as a vector of length $M$. If word $w_i$ occurs in its description, then $X(i)$ will be assign with 1; otherwise 0. Further each protest in the training dataset is assigned $Y=1$ as climate protest, or $Y=0$ as non-climate protest by manually checking its description meaning. In this way, each GSR record is converted to a corresponding vector based on the bag of words. Second of all, we estimate $k_i$ and $b$ based on maximum likelihood criterion. This process is usually converted to convex optimization problem with efficient solutions~\cite{james2013introduction}. Once the coefficients of $k_i$ and $b$ are estimated, the probability for each class is calculated by:
