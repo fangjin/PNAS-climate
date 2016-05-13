@@ -76,7 +76,7 @@ However, even this path of climate effects on income level leading to conflict i
 
 Of course, the occurrence of either a shift in climate, extreme weather, or environmental catastrophe is not sufficient to guarantee that civil unrest is likely to follow.
 In general, the causal mechanisms leading to civil unrest are very complex, and there is no easy way to determine a linear pathway to protest.
-However, to date, little quantitative analysis has been performed on the residual effects of changes resulting from climate, extreme weather, and the environment using a large volume of data. In this analysis, we focus on the breadth of the climate events by looking at events generated from a large Gold Standard Report (GSR) \cite{Embers} containing all of the protests that have occurred in Latin America from 2011-2015.
+However, to date, little quantitative analysis has been performed on the residual effects of changes resulting from climate, extreme weather, and the environment using a large volume of data. In this analysis, we focus on the breadth of the climate events by looking at events generated from a large Gold Standard Report (GSR)~\cite{ramakrishnan2014beating} containing all of the protests that have occurred in Latin America from 2011-2015.
 
 We address three foundational problems. First, we use machine learning to classify climate related protests. By developing a logistic regression classifier, 25352 GSR civil unrest events were classified as either being climate or non-climate related using terms in the description of the event. Second, we use the textual description of protests to extract the climate protest category for protests in each country. For each major climate category, we adopt the knowledge graph approach to define linkage relationship between entities, and study the potentially related protest attributes. Third, we find that the massive climate protests show that certain protest types are shown to correlate with other protest types. Specifically, we find clues such as a lack of water is highly linked with power shortage. This is the first large-scale study of climate related protests to our knowledge.
 
@@ -105,8 +105,8 @@ In the subsequent sections, we conduct a multi-dimensional analysis of these pro
 
 \begin{figure}[htb]
 \centerline
-{\includegraphics[width=.48\textwidth]{figures/month-country-protest3}}
-\caption{Blue bar shows all the GSR protest events, yellow bar shows climate related protest events, green area shows the climate protest percentage over all the Latin American countries, from July 2012 to March 2015.}
+{\includegraphics[width=.48\textwidth]{figures/month-country-protest4}}
+\caption{Blue bar shows all the climate related protests for each country, yellow bar shows the climate protest percentage over its total protest, from July 2012 to March 2015.}
 \label{month_percentage}
 \end{figure}
 
@@ -133,17 +133,17 @@ For these countries, which typically have smaller populations, the significance 
 %\label{map}
 %\end{figure}
 
-\begin{figure}[ht]
-\centerline
-{\includegraphics[width=.4\textwidth]{figures/protest-population_bk}}
-\caption{Climate protest events and population (million) of each country. The two series have a Pearson correlation coefficient 0.64.}
-\label{protest-population_bk}
-\end{figure}
+%\begin{figure}[ht]
+%\centerline
+%{\includegraphics[width=.4\textwidth]{figures/protest-population_bk}}
+%\caption{Climate protest events and population (million) of each country. The two series have a Pearson correlation coefficient 0.64.}
+%\label{protest-population_bk}
+%\end{figure}
 
 
 \begin{figure}[ht]
 \centerline
-{\includegraphics[width=.4\textwidth]{figures/protest-population}}
+{\includegraphics[width=.45\textwidth]{figures/protest-population}}
 \caption{Log10 (Climate protest events) and log10 (population - million) of each country. The two series have a Pearson correlation coefficient 0.70.}
 \label{protest-population}
 \end{figure}
@@ -369,9 +369,9 @@ We expand on these observations in the following where we analyze several dimens
 For some severe and dominant climate events, such as storm, hurricane, flood, and drought events, we employ the knowledge graph to represent the link relationships between entities. By matching the object or subject with climate related keywords, and sentence predicate to a causal keyword like ``result of'', ``cause by'', ``lead to'', ``blamed'', ``accused of'', ``demanding'', ``against'', or ``request'', we can locate and further identify the related occurrences of most protest descriptors.
 
 Figure~\ref{Mexico_causality} shows how the tropical storm caused protests demands in Mexico, which generally fall into four categories: supply, home, government and reconstruction. In the supply related protests, many co-occurring events are: lack of drinking water, lack of good support, and power outage. The second category is about homes, they protest either because of lost homes, requests to relocate to avoid storm, or requests to reconstruct homes. Another protest type targets the government.
-They fight because government did not take action, blame government's indifference to damages, or request finance compensation to the damages. 
+They fight because government did not take action, blame government's indifference to damages, or request finance compensation to the damages.
 In the reconstruction category, residents demand reconstruct channels to avoid more storms, request to reconstruct bridges, roads, schools, or are unsatisfied with the slow pace of rebuilding homes. Figure~\ref{Brazil_causality} describes the co-occurring events of Brazil climate related protests. One possibility is that heat waves hampered production, which led to the farmers' protests over losing land, and the other possibility is that droughts led to residents having a lack of drinking water.
-Thus, both pathways lead to protest. 
+Thus, both pathways lead to protest.
 In Venezuela, the protests are more centered around hydroelectricity, as shown in Figure~\ref{Venezuela_cluster}. Scarce rainfall, drought and failing infrastructure makes water shortages and blackouts a common occurrence in Venezuela. The electricity shortage deteriorates with water shortages, leading to food shortage, and ultimately reduces food quality.
 
 
@@ -452,14 +452,14 @@ In Venezuela, the protests caused by one drought always overlap with the other d
 \matmethods{
 %Please describe your materials and methods here. This can be more than one paragraph, and may contain subsections and equations as required. Authors should include a statement in the methods section describing how readers will be able to access the data in the paper.
 \paragraph{Dataset: GSR}
-The GSR is a gold standard report of protests organized by MITRE~\cite{Embers}, using human analysts, to survey newspapers for reportings of civil unrest. The GSR includes many features such as shown in Figure~\ref{GSR} and including protest location, event date, protest type, status, crowd size, headline, date, population, protest description, first reported links, etc. The description feature is a brief description of the protest. It contains information like who, where, why and when surrounding protests. As Figure~\ref{GSR} shows, the protest description is `small farmers want the bank to forgive their debts due to the drought, which has hampered production'.
+The GSR is a gold standard report of protests organized by MITRE~\cite{ramakrishnan2014beating}, using human analysts, to survey newspapers for reportings of civil unrest. The GSR includes many features such as protest location, event date, protest type, status, crowd size, headline, date, population, protest description, first reported links, etc. The description feature is a brief description of the protest. It contains information like who, where, why and when surrounding protests. %As Figure~\ref{GSR} shows, the protest description is `small farmers want the bank to forgive their debts due to the drought, which has hampered production'.
 
-\begin{figure}[th]
-\centerline
-{\includegraphics[width = 2.5in]{figures/gsr_event_json.png}}
-\caption{Gold standard report (GSR) format.}
-\label{GSR}
-\end{figure}
+%\begin{figure}[th]
+%\centerline
+%{\includegraphics[width = 2.5in]{figures/gsr_event_json.png}}
+%\caption{Gold standard report (GSR) format.}
+%\label{GSR}
+%\end{figure}
 
 
 %
